@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Variables:  USER = Folder name of the User Home
+USER="kicka"
+
+if [ -d /home/${USER}/.cache/previsioni_meteo ]; then
+    echo "Le previsioni saranno salvate nella cartella /home/${USER}/.cache/previsioni_meteo ."
+else 
+    echo -n "Creazione della cartella /home/${USER}/.cache/previsioni_meteo ..."
+    mkdir -p /home/${USER}/.cache/previsioni_meteo
+    echo "fatto!"
+fi 
+ 
+DATA_CORRENTE=`date +%Y%m%d`
+PREVISIONI=/home/${USER}/.cache/previsioni_meteo/${DATA_CORRENTE}
+ 
+echo -n "Scarico le previsioni dal sito http://www.ilmeteo.it ..."
+
+wget -q http://www.ilmeteo.it/pdf/meteo-palermo.pdf -O ${PREVISIONI}_meteo-palermo.pdf
+ 
+echo "fatto!"
+ 
+echo -n "Creazione del file "${PREVISIONI}_meteo.pdf" ..."
+ 
+pdftk ${PREVISIONI}_meteo-*.pdf cat output ${PREVISIONI}_meteo.pdf
+ 
+echo "fatto!"
+
+rm ${PREVISIONI}_meteo-palermo.pdf
+ 
+okular ${PREVISIONI}_meteo.pdf 
