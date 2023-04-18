@@ -1,0 +1,9 @@
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 144x144
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+Xcursor.size: 32
+Xcursor.theme: breeze_cursors
