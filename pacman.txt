@@ -88,6 +88,7 @@ clinfo
 clucene
 cmake
 colord
+colord-sane
 compiler-rt
 confuse
 convertlit
@@ -423,7 +424,6 @@ krb5
 krita
 krunner
 krusader
-ksanecore
 kscreen
 kscreenlocker
 kservice
@@ -719,7 +719,6 @@ libkcompactdisc
 libkdcraw
 libkexiv2
 libkomparediff2
-libksane
 libksba
 libkscreen
 libksysguard
@@ -1337,7 +1336,7 @@ signon-kwallet-extension
 signon-plugin-oauth2
 signon-ui
 signond
-skanlite
+simple-scan
 slang
 smbclient
 smplayer
