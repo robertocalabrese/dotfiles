@@ -1,0 +1,119 @@
+[Collection Browser]
+TreeCategory=3,1
+View Mode=NormalCollections
+
+[Collection Folders]
+3=Musica
+
+[Collection Transcoding Preference]
+Encoder=INVALID
+TrackSelection=0
+
+[ConfigDialog]
+DP-2 Height 3840x2160 DP-2=773
+DP-2 Width 3840x2160 DP-2=1239
+
+[Context]
+enabledApplets=org.kde.amarok.lyrics
+org.kde.amarok.lyrics_contentHeight=1785
+
+[Cover Fetcher]
+geometry=\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x05\xf3\x00\x00\x03H\x00\x00\x08\xf8\x00\x00\x05\t\x00\x00\x05\xf3\x00\x00\x03}\x00\x00\x08\xf8\x00\x00\x05\t\x00\x00\x00\x00\x00\x00\x00\x00\x0f\x00\x00\x00\x05\xf3\x00\x00\x03}\x00\x00\x08\xf8\x00\x00\x05\t
+
+[File Browser]
+Current Directory=file:///home/kicka
+
+[General]
+Browser Path=root list/collections
+First Run=false
+HiddenOnExit=true
+
+[General Options]
+AutoGetCoverArt=true
+Favor Tracks=LessRecentlyPlayed
+PlayFirstRunJingle=false
+Show Tray Icon=false
+Track Progression=RepeatPlaylist
+
+[KFileDialog Settings]
+iconViewIconSize=64
+
+[MainWindow]
+3840x2160 screen: Height=480
+3840x2160 screen: Width=814
+3840x2160 screen: Window-Maximized=true
+3840x2160 screen: XPosition=6
+3840x2160 screen: YPosition=132
+DP-2=DP-2
+DP-2 Height 3840x2160 DP-2=2022
+DP-2 Width 3840x2160 DP-2=3828
+DP-2 XPosition 3840x2160 DP-2=6
+DP-2 YPosition 3840x2160 DP-2=132
+State=AAAA/wAAAAD9AAAAAQAAAAAAAA7sAAAHXPwBAAAAA/sAAAAkAE0AZQBkAGkAYQAgAFMAbwB1AHIAYwBlAHMAIABkAG8AYwBrAQAAAAAAAAO/AAAAzAEAAAP7AAAAGABDAG8AbgB0AGUAeAB0ACAAZABvAGMAawEAAAPAAAAHbAAAAZQBAAAD+wAAABoAUABsAGEAeQBsAGkAcwB0ACAAZABvAGMAawEAAAstAAADvwAAAMwBAAADAAAAAAAAB1wAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYATQBhAGkAbgBUAG8AbwBsAGIAYQByAQAAAAD/////AAAAAAAAAAAAAAAYAFMAbABpAG0AIABUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+
+[OSD]
+Osd Enabled=false
+OsdHideOnFullscreen=true
+
+[Phonon::AudioOutput]
+Amarok_Volume=1
+
+[Playback]
+Inhibit Suspend=false
+Master Volume=100
+Start Playing On Add=false
+
+[Playlist Search]
+MatchAlbum=true
+MatchArtist=true
+MatchTrack=true
+ShowOnlyMatches=false
+
+[Playlist Sorting]
+SortPath=
+
+[Plugins]
+amarok_collection-audiocdcollectionEnabled=true
+amarok_collection-daapcollectionEnabled=false
+amarok_collection-mtpcollectionEnabled=true
+amarok_collection-mysqlcollectionEnabled=true
+amarok_collection-playdarcollectionEnabled=false
+amarok_collection-umscollectionEnabled=true
+amarok_importer-amarokEnabled=false
+amarok_importer-bansheeEnabled=false
+amarok_importer-clementineEnabled=false
+amarok_importer-fastforwardEnabled=false
+amarok_importer-itunesEnabled=true
+amarok_importer-rhythmboxEnabled=false
+amarok_service_ampacheEnabled=false
+amarok_service_lastfmEnabled=false
+amarok_service_magnatunestoreEnabled=false
+amarok_service_opmldirectoryEnabled=false
+
+[Podcast View]
+Merged View=false
+
+[Podcasts]
+AutoUpdate Interval=30
+Maximum Simultaneous Downloads=4
+Maximum Simultaneous Updates=4
+
+[Saved Playlists View]
+Merged View=false
+
+[ScriptManager]
+Enable Scripts=true
+
+[Session]
+LastPlaying=4
+
+[StatSyncing]
+checkedFields=rating,firstplay,lastplay,playcount,label
+excludedLabels=
+providerEnabledStatuses=true,false
+providerIds=localCollection,1106c32b6125c084
+providerNames=Collezione locale,USB_256_GB (non attivata)
+
+[TagDialog]
+CurrentTab=2
