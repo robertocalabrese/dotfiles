@@ -1,0 +1,85 @@
+## War Machine Shortcuts (WMS)
+#
+# Developer:  🆁 🅾 🅱 🅴 🆁 🆃 🅾   🅲 🅰 🅻 🅰 🅱 🆁 🅴 🆂 🅴
+# City:       🅿 🅰 🅻 🅴 🆁 🅼 🅾 , 🆂 🅸 🅲 🅸 🅻 🆈
+# Country:    🅸 🆃 🅰 🅻 🆈
+
+# Keys                     Action                                            Category
+------------------------------------------------------------------------------------------
+F12                        Open 'Krunner'                                    Program
+Meta                       Open 'KDE menu'                                   Program
+
+Meta + 1                   Go to 'Desktop 1'                                 Virtual desktop
+Meta + 2                   Go to 'Desktop 2'                                 Virtual desktop
+Meta + 3                   Go to 'Desktop 3'                                 Virtual desktop
+Meta + 4                   Go to 'Desktop 4'                                 Virtual desktop
+Meta + 5                   Go to 'Desktop 5'                                 Virtual desktop
+Meta + 6                   Go to 'Desktop 6'                                 Virtual desktop
+Meta + 7                   Go to 'Desktop 7'                                 Virtual desktop
+Meta + 8                   Go to 'Desktop 8'                                 Virtual desktop
+Meta + 9                   Go to 'Desktop 9'                                 Virtual desktop
+
+Meta + D                   Show/Hide the current 'desktop'                   Window
+Meta + W                   Show all 'virtual desktop' and 'applications'     Window
+Meta + F8                  Show all 'virtual desktop'                        Window
+Meta + C                   Close the 'focussed' window                       Window
+Meta + Shift + C           Close 'all' windows                               Window
+
+Meta + P                   Change the 'Displays' configurations              Screen
+Meta + R                   Play/Stop recording with 'SimpleScreenRecorder'   Screen
+
+Meta + ArrowDown           Focus the 'bottom' window                         Tiling
+Meta + ArrowLeft           Focus the 'left' window                           Tiling
+Meta + ArrowRight          Focus the 'right' window                          Tiling
+Meta + ArrowUp             Focus the 'upper' window                          Tiling
+Meta + Home                Focus the 'previous' window                       Tiling
+Meta + End                 Focus the 'next' window                           Tiling
+
+Meta + Alt + 1             Toggle 'Monocle' layout                           Tiling
+Meta + Alt + 2             Toggle 'Spiral' layout                            Tiling
+Meta + Alt + 3             Toggle 'Three Column' layout                      Tiling
+Meta + Alt + 4             Toggle 'Quarter' layout                           Tiling
+Meta + Alt + 5             Toggle 'Tile' layout                              Tiling
+Meta + Alt + 6             Toggle 'Spread' layout                            Tiling
+Meta + Alt + 7             Toggle 'Stair' layout                             Tiling
+Meta + Alt + 8             Toggle 'Floating' layout                          Tiling
+
+Meta + Enter               Move the 'focussed' window to the 'master area'   Tiling
+Meta + Ctrl + ArrowDown    Move the 'focussed' window to the 'bottom'        Tiling
+Meta + Ctrl + ArrowLeft    Move the 'focussed' window to the 'left'          Tiling
+Meta + Ctrl + ArrowRight   Move the 'focussed' window to the 'right'         Tiling
+Meta + Ctrl + ArrowUp      Move the 'focussed' window to the 'top'           Tiling
+Meta + Ctrl + Home         Move the 'focussed' window to the 'previous spot' Tiling
+Meta + Ctrl + End          Move the 'focussed' window to the 'next spot'     Tiling
+
+Meta + Ctrl + 1            Move the 'focussed' window to 'Desktop 1'         Virtual desktop
+Meta + Ctrl + 2            Move the 'focussed' window to 'Desktop 2'         Virtual desktop
+Meta + Ctrl + 3            Move the 'focussed' window to 'Desktop 3'         Virtual desktop
+Meta + Ctrl + 4            Move the 'focussed' window to 'Desktop 4'         Virtual desktop
+Meta + Ctrl + 5            Move the 'focussed' window to 'Desktop 5'         Virtual desktop
+Meta + Ctrl + 6            Move the 'focussed' window to 'Desktop 6'         Virtual desktop
+Meta + Ctrl + 7            Move the 'focussed' window to 'Desktop 7'         Virtual desktop
+Meta + Ctrl + 8            Move the 'focussed' window to 'Desktop 8'         Virtual desktop
+Meta + Ctrl + 9            Move the 'focussed' window to 'Desktop 9'         Virtual desktop
+
+Meta + Ctrl + Enter        Open 'Alacritty'                                  Program
+Meta + Ctrl + A            Open 'Amarok'                                     Program
+Meta + Ctrl + C            Open 'Calculator'                                 Program
+Meta + Ctrl + D            Open 'Dolphin'                                    Program
+Meta + Ctrl + F            Open 'Firefox'                                    Program
+Meta + Ctrl + G            Open 'Git Kraken'                                 Program
+Meta + Ctrl + I            Open 'Inkscape'                                   Program
+Meta + Ctrl + K            Open 'KDE Settings'                               Program
+Meta + Ctrl + M            Open 'Meteo'                                      Program
+Meta + Ctrl + N            Open 'Netflix'                                    Program
+Meta + Ctrl + O            Open 'Notes'                                      Program
+Meta + Ctrl + Q            Open 'Qbittorrent'                                Program
+Meta + Ctrl + R            Open 'SimpleScreenRecorder'                       Program
+Meta + Ctrl + S            Open 'Sublime'                                    Program
+Meta + Ctrl + T            Open 'Tor'                                        Program
+Meta + Ctrl + V            Open 'Virtual Box'                                Program
+Meta + Ctrl + X            Open 'Xfburn'                                     Program
+
+Meta + Ctrl + 0            Open '0 AD'                                       Game
+Meta + Ctrl + W            Open 'World of Warcraft'                          Game
+--------------------------------------------------------------------------------------------
