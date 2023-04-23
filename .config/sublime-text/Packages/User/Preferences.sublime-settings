@@ -44,7 +44,7 @@
     // Because of this, setting them here will have no effect: you must set them
     // in your User File Preferences.
     "font_face": "Ubuntu Mono",
-    "font_size": 17,
+    "font_size": 15,
 
     // Valid options on all platforms are:
     //  - "no_bold": Disables bold text
