@@ -56,9 +56,14 @@ else
   bind '$' __history_previous_command_arguments
 end
 
-#if status is-interactive
-#    # Commands to run in interactive sessions can go here
-#end
+if status is-interactive
+  # Commands to run in interactive sessions can go here
+
+  # Start X at login
+  if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+      exec startx -- -keeptty
+  end
+end
 
 # setting the starship prompt
 starship init fish | source

@@ -11,6 +11,10 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
+# history
+alias h='history | tac | bat'
+alias hc='history -c | tac | bat'
+
 # changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a  --color=always --group-directories-first' # all files and dirs
@@ -38,7 +42,7 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-# launch a bash shell with no preconfigured bash options.
+# launch a bash shell.
 alias bash_shell='bash --rcfile ~/.bashrc-no-fish-shell'
 
 # plocate instead of locate
@@ -63,6 +67,14 @@ alias GTK3='sudo dconf-editor'
 alias QT4='sudo qtconfig-qt4'
 alias QT5='sudo qt5ct'
 alias reload_fonts='fc-cache -fv && sudo fc-cache -fv'
+
+# systemd
+alias boot_time='systemd-analyze'
+alias boot_chart='systemd-analyze blame'
+alias running_services='systemctl list-unit-files | bat'
+alias last_journal='sudo journalctl -b'
+alias verify_journal='sudo journalctl --verify'
+alias systemd_failed='systemctl --failed'
 
 # camera
 alias camera_detect='gphoto2 --auto-detect'

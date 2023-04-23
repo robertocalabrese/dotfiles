@@ -1,6 +1,6 @@
 function upgrade
     # Upgrades the entire system (OFFICIAL PKGS and AUR PKGS)
-    command paru -Syyu --needed --noconfirm
+    command yay -Syyu --needed --noconfirm
 
     # Backups all the packages installed from the official repository into "$HOME/pacman.txt".
     command rm -f "$HOME/pacman.txt"
