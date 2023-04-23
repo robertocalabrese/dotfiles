@@ -23,4 +23,6 @@ ttf-ms-fonts
 unionfs-fuse
 upd72020x-fw
 ventoy-bin
+virtualbox-bin-guest-iso
 wd719x-firmware
+yay-bin

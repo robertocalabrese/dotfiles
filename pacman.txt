@@ -232,7 +232,6 @@ gmp
 gnome-color-manager
 gnome-common
 gnome-desktop
-gnome-desktop-4
 gnome-desktop-common
 gnome-keyring
 gnome-settings-daemon
@@ -399,6 +398,7 @@ kinit
 kio
 kio-extras
 kio-fuse
+kirigami-addons
 kirigami2
 kitemmodels
 kitemviews
@@ -606,7 +606,6 @@ libaacs
 libabw
 libaccounts-glib
 libaccounts-qt
-libadwaita
 libaio
 libao
 libappimage
@@ -1469,8 +1468,6 @@ xcursor-themes
 xdelta3
 xdg-dbus-proxy
 xdg-desktop-portal
-xdg-desktop-portal-gnome
-xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
 xdg-user-dirs
 xdg-user-dirs-gtk
@@ -1518,6 +1515,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xorgproto
+xsettingsd
 xvidcore
 xxhash
 xz
