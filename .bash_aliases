@@ -31,9 +31,6 @@ alias free='free -m'
 alias wget='wget -c'
 alias mkdir='mkdir -p'
 
-# launch a fish shell with no preconfigured fish options.
-alias fish_shell='fish --no-config'
-
 alias exe='chmod +x'
 alias chownRoot='sudo chown root:root'
 alias chownUser='sudo chown $USER:users'
@@ -41,9 +38,6 @@ alias chownUser='sudo chown $USER:users'
 # compress/decompress
 alias compress='tar -cvpzf'
 alias decompress='tar -xvpzf'
-
-# pulseaudio restart
-alias reset_pulseaudio='pulseaudio --kill; sleep 1; pulseaudio --start'
 
 # World of Warcraft
 alias kill_wow='killall WoW.exe'
@@ -58,11 +52,10 @@ alias QT5='sudo qt5ct'
 
 # pacman
 alias update='sudo pacman -Syyu'
-alias upgrade='paru -Syyua --noconfirm'
-alias cerca='paru -Ss'
-alias installa='sudo pacman -S'
-alias rimuovi='sudo pacman -Rsn'
-alias rimuovi_singolo_pacchetto='sudo pacman -Rdd'
+alias upgrade='yay -Syyua --noconfirm'
+alias search='yay -Ss'
+alias remove='sudo pacman -Rsn'
+alias force_remove='sudo pacman -Rdd'
 
 # makepkg related
 alias Makepkg='makepkg -g >> PKGBUILD && makepkg -i'
@@ -73,16 +66,13 @@ alias MD5='md5sum'
 alias reload_fonts='fc-cache -fv && sudo fc-cache -fv'
 
 # history
-alias h='history'
-alias h1='history 10'
-alias h2='history 20'
-alias h3='history 30'
-alias hc='history -c'
+alias h='history | tac | bat'
+alias hc='history -c | tac | bat'
 
 # systemd
 alias boot_time='systemd-analyze'
 alias boot_chart='systemd-analyze blame'
-alias running_services='systemctl list-unit-files'
+alias running_services='systemctl list-unit-files | bat'
 alias last_journal='sudo journalctl -b'
 alias verify_journal='sudo journalctl --verify'
 alias systemd_failed='systemctl --failed'
