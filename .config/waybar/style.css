@@ -1,0 +1,199 @@
+@define-color backgroundlight #FFFFFF;
+@define-color backgrounddark #FFFFFF;
+@define-color workspacesbackground1 #FFFFFF;
+@define-color workspacesbackground2 #CCCCCC;
+@define-color bordercolor #FFFFFF;
+@define-color textcolor1 #000000;
+@define-color textcolor2 #000000;
+@define-color textcolor3 #FFFFFF;
+@define-color iconcolor #FFFFFF;
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+* {
+	font-family: Ubuntu Nerd Font, sans-serif;
+}
+
+window#waybar {
+	background-color: rgba(26,27,38,0.4);
+	border-bottom: 1px solid rgba(26,27,38,0);
+	border-radius: 0px;
+	color: #f8f8f2;
+}
+
+tooltip {
+  background: #1a1b26;
+  border: 1px solid #ff658e;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+tooltip label {
+  color: #f8f8f2;
+  padding: 0.25em;
+}
+
+/* ###############
+ * ## Left side ##
+ * ############### */
+
+#custom-menu {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#workspaces {
+	margin: 5px;
+	padding: 2px 5px;
+	border-radius: 15px;
+	border: 0px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 20px;
+	font-weight: bold;
+	color: #15161e;
+}
+
+#workspaces button {
+	padding: 0px 10px;
+	margin: 0px 5px;
+	border-radius: 15px;
+	border: 0px;
+	color: #f8f8f2;
+	transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+	color: #15161e;
+	background: #ff658e;
+	border-radius: 15px;
+	min-width: 40px;
+	transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+	color: #15161e;
+	background: #ff658e;
+	border-radius: 15px;
+}
+
+#window {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+/* ############
+ * ## Center ##
+ * ############ */
+
+#clock {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+/* ################
+ * ## Right side ##
+ * ################ */
+
+ #custom-packages {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#custom-mediaplayer {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#tray {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#idle_inhibitor {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+#temperature {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#cpu {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#memory {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#network {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#pulseaudio {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#battery {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}

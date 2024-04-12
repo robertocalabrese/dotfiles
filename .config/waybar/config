@@ -1,0 +1,186 @@
+{
+	// ##########################
+	// ## Global configuration ##
+	// ##########################
+
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"custom/menu",
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+
+	"modules-center": [
+		"clock"
+	],
+
+	"modules-right": [
+		"custom/packages",
+		"custom/mediaplayer",
+		"tray",
+		"idle_inhibitor",
+		"temperature",
+		"cpu",
+		"memory",
+		"pulseaudio"
+	],
+
+	// ###############
+	// ## Left side ##
+	// ###############
+
+	"custom/menu": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wofi --show drun"
+    },
+
+	"hyprland/workspaces" : {
+		"active-only": false,
+		"all-outputs": true,
+		"format": "{}",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			 "*": 1
+		},
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1"
+	},
+
+	"hyprland/window": {
+		"max-length": 60,
+		"separate-outputs": true
+	},
+
+	// ############
+	// ## Center ##
+	// ############
+
+	"clock": {
+		"interval": 60,
+		"format": "{:L%A %d %B %Y   -   %H:%M}",
+		"max-length": 40,
+		"tooltip": false
+	},
+
+	// ################
+	// ## Right side ##
+	// ################
+
+	"custom/packages": {
+		"exec": "checkupdates | wc -l",
+		"exec-if": "$HOME/.config/waybar/scripts/check_for_upgrades.sh 0",
+		"format": " {}",
+		"interval": 45,
+		//"on-click": "alacritty -e '.config/waybar/scripts/upgrade.sh'",
+		"tooltip": false
+	},
+
+	"custom/mediaplayer": {
+		"format": "{}",
+		"return-type": "json",
+		"max-length": 40,
+		"escape": true,
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "playerctl previous",
+		"on-scroll-down": "playerctl next",
+		"exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+	},
+
+	"tray": {
+		"icon-size": 24,
+		"spacing": 20
+	},
+
+	"idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": "true"
+    },
+
+    // "battery": {
+    //     "states": {
+    //         "warning": 30,
+    //         "critical": 15
+    //     },
+    //     "format": "{icon} {capacity}%",
+    //     "format-charging": "󰂄 {capacity}%",
+    //     "format-plugged": "󱘖 {capacity}%",
+    //     "format-icons": ["", "", "", "", ""],
+    //     // "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    //     "on-click": "",
+    //     "tooltip": false
+    // },
+
+	"temperature": {
+		"thermal-zone": 2,
+		"interval": 3,
+		"hwmon-path": "/sys/class/hwmon/hwmon3/temp2_input",
+		"critical-threshold": 90,
+		"format-critical": "  {temperatureC} °C",
+		"format": "{icon} {temperatureC} °C",
+		"format-icons": ["", "", "", "", ""],
+		"max-length": 7,
+		"min-length": 7,
+		"on-click": "alacritty -e '.config/waybar/scripts/sensors.sh'",
+		"tooltip": false
+	},
+
+	"cpu": {
+		"interval": 5,
+		"format": " {usage:1} %",
+		"on-click": "alacritty -e 'htop'",
+		"tooltip": false
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": " {} %",
+		"on-click": "alacritty -e 'htop'"
+	},
+
+	// "network": {
+	// 	"format-wifi": " {essid} ({signalStrength}%)",
+	// 	"format-ethernet": "",
+	// 	"format-linked": "{ifname} (No IP) ",
+	// 	"format": "",
+	// 	"format-disconnected": "",
+	// 	"format-alt": "{ifname}: {ipaddr}/{cidr}",
+	// 	"on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
+	// 	"on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
+	// 	"tooltip-format": ": {bandwidthDownBits}\n\n: {bandwidthUpBits}\n\nIP: {ipaddr}/{cidr}\n",
+	// 	"tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+	// 	"interval": 10
+	// },
+
+	"pulseaudio": {
+		"format": "{icon} {volume} % {format_source}",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": " {format_source}",
+		"format-source": " {volume} %",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+	}
+}
