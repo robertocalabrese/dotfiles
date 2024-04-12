@@ -1,0 +1,138 @@
+## ~/.fish_aliases
+#
+# Developer:  🆁🅾🅱🅴🆁🆃🅾  🅲🅰🅻🅰🅱🆁🅴🆂🅴
+# City:       🅿🅰🅻🅴🆁🅼🅾, 🆂🅸🅲🅸🅻🆈
+# Country:    🅸🆃🅰🅻🆈
+
+##################
+## FISH aliases ##
+##################
+
+# Aliases and shortcuts
+alias aaa='clear && bat -l bash --paging=never ~/.fish_aliases'
+alias ggg='clear && bat -l bash --paging=never ~/.git_aliases'
+
+# dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Navigations
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# Logout, reboot and shutdown
+alias logout='pkill -u $USER'
+alias reboot='systemctl reboot'
+alias shutdown='systemctl poweroff'
+
+# History
+alias h='history | tac | bat'
+alias hc='history -c | tac | bat'
+
+# 'eza' instead of 'ls'
+alias ls='eza -al --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # my preferred listing
+alias la='eza -a  --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # all files and dirs
+alias ll='eza -l  --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # long format
+alias lt='eza -aT --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # tree listing
+alias l.='eza -a | rg "^\."'
+
+# Colorize grep output
+alias dir='dir --color=auto'
+alias grep='grep --color=tty -d skip'
+alias vdir='vdir --color=auto'
+
+# Confirm before overwriting something
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# Adding some flags to some very common commands
+alias df='df -h'
+alias free='free -m'
+alias mkdir='mkdir -p'
+alias wget='wget -c'
+
+# 'chown'
+alias chownUser='sudo chown $USER:users'
+alias chownRoot='sudo chown root:root'
+
+# Compress/Decompress
+alias compress='tar -cvpzf'
+alias decompress='tar -xvpzf'
+
+# Reload all fonts
+alias reload_fonts='fc-cache -fv && sudo fc-cache -fv'
+
+# Systemd
+alias boot_time='systemd-analyze'
+alias boot_chart='systemd-analyze blame'
+alias last_journal='sudo journalctl -b'
+alias running_services='systemctl list-unit-files | bat'
+alias systemd_failed='systemctl --failed'
+alias verify_journal='sudo journalctl --verify'
+
+# 'neofetch'
+alias neo='clear && neofetch'
+
+# 'plocate' instead of 'locate'#
+alias locate='plocate'
+
+if [ "$DESKTOP_SESSION" = "hyprland" ]
+	alias last_notification='makoctl restore'
+	alias shortcuts='clear && bat -l bash --paging=never ~/.hyprland'
+else
+	alias KDE='sudo dbus-launch systemsettings'
+	alias restart_plasma='systemctl --user restart plasma-plasmashell.service'
+	alias shortcuts='clear && bat -l bash --paging=never ~/.plasma'
+end
+
+# 'yt-dlp'
+alias youtube_video='yt-dlp --ignore-errors --external-downloader aria2c --external-downloader-args "-c -j 3 -x 3 -s 3 -k 1M" -f bestvideo+bestaudio'
+alias youtube_song='yt-dlp -x --ignore-errors --external-downloader aria2c --external-downloader-args "-c -j 3 -x 3 -s 3 -k 1M" -f bestvideo+bestaudio --audio-format mp3 --audio-quality 320k'
+
+#############################
+## Distro specific aliases ##
+#############################
+
+# Archlinux
+alias cleanup='/home/$USER/.local/bin/cleanup.sh'
+alias force_remove='sudo pacman -Rdd'
+alias install='sudo pacman -S'
+alias Makepkg='makepkg -g >> PKGBUILD && makepkg -i'
+alias pacman_unlock='sudo rm /var/lib/pacman/db.lck'
+alias remove='sudo pacman -Runs'
+alias search='yay -Ss'
+alias update='sudo pacman -Syyu'
+alias update_mirrors='sudo reflector -c Belgium,France,Germany,Italy,Netherlands,Sweden,Switzerland -a 6 --sort rate --protocol https --verbose --save /etc/pacman.d/mirrorlist'
+alias update_pkgfile='sudo pkgfile --update'
+alias upgrade='yay -Syyu --needed --noconfirm'
+
+## Debian/Ubuntu
+#alias cleanup='sudo apt autoremove'
+#alias eza='exa'
+#alias install='sudo apt install'
+#alias remove='sudo apt remove --purge'
+#alias search='apt search'
+#alias update='sudo apt update && sudo apt upgrade'
+#alias upgrade='sudo apt update && sudo apt dist-upgrade'
+
+## Fedora
+#alias cleanup='sudo dnf autoremove'
+#alias eza='exa'
+#alias install='sudo dnf install'
+#alias remove='sudo dnf remove'
+#alias search='dnf search'
+#alias update='sudo dnf upgrade'
+#alias upgrade='sudo dnf upgrade'
+
+## Opensuse
+#alias cleanup='sudo zypper purge-kernels'
+#alias eza='exa'
+#alias install='sudo zypper install'
+#alias remove='sudo zypper remove -u'
+#alias search='zypper search'
+#alias update='sudo zypper refresh && sudo zypper update -l '
+#alias upgrade='sudo zypper refresh && sudo zypper update -l '
+##alias upgrade='sudo zypper refresh && sudo zypper dist-upgrade -l '
