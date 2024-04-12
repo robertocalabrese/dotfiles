@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=GKraken
+Comment=GUI to control cooling and lighting of NZXT Kraken X40, X60, X31, X41, X51, X61, X42, X52, X62, X72, X53, X63, X73, Z63 or Z73 pumps
+Terminal=false
+Categories=System;Settings;
+Icon=/usr/lib/python3.11/site-packages/gkraken/data/com.leinardi.gkraken
+Exec=gkraken --hide-window
+X-GNOME-Autostart-enabled=true
