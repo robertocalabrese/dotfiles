@@ -1,0 +1,85 @@
+# Developer:  🆁 🅾 🅱 🅴 🆁 🆃 🅾  🅲 🅰 🅻 🅰 🅱 🆁 🅴 🆂 🅴
+# City:       🅿 🅰 🅻 🅴 🆁 🅼 🅾, 🆂 🅸 🅲 🅸 🅻 🆈
+# Country:    🅸 🆃 🅰 🅻 🆈
+
+# Keys 						Action
+-----------------------------------------------------------------------------
+Meta + Del                      Log out
+Ctrl + Alt + Del                Reboot
+Meta + Ctrl + Alt + Del         Shutdown
+Meta + Escape                   Restart 'XDG portals'
+
+Meta + F1                       Toggle 'gamemode'
+Meta + F                        Toggle 'fullscreen' on the 'focussed' window.
+Meta + J                        Toggle 'split' mode
+Meta + P                        Toggle 'pseudo' windows
+Meta + T                        Toggle 'floating' for the 'focussed' window
+Meta + Alt + Ctrl + T           Toggle 'floating' for 'all' windows
+
+Meta + V                        Open  the 'clipboard'
+Meta + Alt + Ctrl + V           Clear the 'clipboard'
+
+Meta + B                        Toggle the visibility of 'Waybar'
+Meta + W                        Reload 'Waybar'
+
+Meta + ArrowUp                  Set the 'focus' on the window on the 'left'   of the current one
+Meta + ArrowDown                Set the 'focus' on the window on the 'right'  of the current one
+Meta + ArrowLeft                Set the 'focus' on the window on the 'top'    of the current one
+Meta + ArrowRight               Set the 'focus' on the window on the 'bottom' of the current one
+
+Meta + Alt + ArrowLeft          Resize the 'focussed' window to the 'left'   by 60 pixels
+Meta + Alt + ArrowRight         Resize the 'focussed' window to the 'right'  by 60 pixels
+Meta + Alt + ArrowUp            Resize the 'focussed' window to the 'top'    by 60 pixels
+Meta + Alt + ArrowDown          Resize the 'focussed' window to the 'bottom' by 60 pixels
+
+Meta + RightMouseButton         Resize the 'window' under the cursor
+Meta + LeftMouseButton          Move the 'window' under the cursor
+
+Meta + 1                        Switch to 'Desktop 1'
+Meta + 2                        Switch to 'Desktop 2'
+Meta + 3                        Switch to 'Desktop 3'
+Meta + 4                        Switch to 'Desktop 4'
+Meta + 5                        Switch to 'Desktop 5'
+Meta + 6                        Switch to 'Desktop 6'
+Meta + 7                        Switch to 'Desktop 7'
+Meta + 8                        Switch to 'Desktop 8'
+Meta + 9                        Switch to 'Desktop 9'
+Meta + 0                        Switch to 'Desktop 10'
+
+Meta + Alt + 1                  Put the 'focussed' window to 'Desktop 1'
+Meta + Alt + 2                  Put the 'focussed' window to 'Desktop 2'
+Meta + Alt + 3                  Put the 'focussed' window to 'Desktop 3'
+Meta + Alt + 4                  Put the 'focussed' window to 'Desktop 4'
+Meta + Alt + 5                  Put the 'focussed' window to 'Desktop 5'
+Meta + Alt + 6                  Put the 'focussed' window to 'Desktop 6'
+Meta + Alt + 7                  Put the 'focussed' window to 'Desktop 7'
+Meta + Alt + 8                  Put the 'focussed' window to 'Desktop 8'
+Meta + Alt + 9                  Put the 'focussed' window to 'Desktop 9'
+Meta + Alt + 0                  Put the 'focussed' window to 'Desktop 10'
+
+Meta + Q                        Close the 'focussed' window
+
+Meta + ScrollDown               Walk through active 'desktops'
+Meta + ScrollUp                 Walk through active 'desktops' (Reverse)
+
+Meta + Alt + Ctrl + Return      Open 'Konsole'
+Meta + Alt + Return             Open 'Alacritty'
+Meta + Alt + A                  Open 'Amarok'
+Meta + Alt + C                  Open 'Calculator'
+Meta + Alt + D                  Open 'Dolphin'
+Meta + Alt + F                  Open 'Firefox'
+Meta + Alt + G                  Open 'Gimp'
+Meta + Alt + K                  Open 'KDE Settings'
+Meta + Alt + I                  Open 'Inkscape'
+Meta + Alt + M                  Open 'Weather Forecast'
+Meta + Alt + N                  Open 'Netflix'
+Meta + Alt + P                  Open 'Color Picker HEX'
+Meta + Alt + Ctrl + P           Open 'Color Picker RGB'
+Meta + Alt + Q                  Open 'Qbittorrent'
+Meta + Alt + S                  Open 'Sublime Text'
+Meta + Alt + T                  Open 'Tor Browser'
+Meta + Alt + V                  Open 'Virtualbox'
+
+Menu                            Open 'Application launcher'
+Print                           Open 'hp-print'
+Scroll_lock                     Open 'hyprshot-gui'
