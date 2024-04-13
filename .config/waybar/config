@@ -76,7 +76,7 @@
 		"tooltip": false,
 		"interval": 1800,
 		"exec": "$HOME/.config/waybar/scripts/wttr.py",
-		"on-click": "$HOME/.local/bin/weather_forecast.sh",
+		"on-click": "$HOME/.config/waybar/scripts/weather_forecast.sh",
 		"return-type": "json"
 	},
 
