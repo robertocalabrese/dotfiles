@@ -104,6 +104,14 @@ tooltip label {
 	font-weight: normal;
 }
 
+#custom-weather {
+    padding: 2px 5px;
+    transition: none;
+    color: #f8f8f2;
+    background: rgba(26,27,38,0);
+    font-size: 22px;
+}
+
 /* ################
  * ## Right side ##
  * ################ */
