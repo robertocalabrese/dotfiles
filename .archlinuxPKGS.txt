@@ -60,7 +60,6 @@ breeze-gtk
 breeze-icons
 brotli
 btrfs-progs
-bubblewrap
 bzip2
 c-ares
 ca-certificates
@@ -144,8 +143,6 @@ findutils
 firefox
 fish
 flac
-flatpak
-flatpak-kcm
 flex
 fluidsynth
 fmt
@@ -550,7 +547,6 @@ liblrdf
 libltc
 liblzf
 libmad
-libmalcontent
 libmatroska
 libmbim
 libmd
@@ -803,7 +799,6 @@ openssh
 openssl
 opus
 orc
-ostree
 otf-font-awesome
 p11-kit
 p7zip
@@ -1181,7 +1176,6 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 xcur2png
-xdg-dbus-proxy
 xdg-desktop-portal
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
@@ -1202,7 +1196,6 @@ xorg-server-common
 xorg-setxkbmap
 xorg-xauth
 xorg-xdpyinfo
-xorg-xhost
 xorg-xinput
 xorg-xkbcomp
 xorg-xmessage
