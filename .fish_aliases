@@ -13,7 +13,7 @@ alias aaa='clear && bat -l bash --paging=never ~/.fish_aliases'
 alias ggg='clear && bat -l bash --paging=never ~/.git_aliases'
 
 # dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Navigations
 alias ..='cd ..'
