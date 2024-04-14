@@ -7,6 +7,7 @@ google-chrome
 hyprpicker
 hyprshot
 mailspring
+pyprland
 python-injector
 qt5ct-kde
 qt6ct-kde
