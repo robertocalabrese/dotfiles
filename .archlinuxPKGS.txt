@@ -24,7 +24,6 @@ aom
 appmenu-gtk-module
 appstream
 appstream-qt
-archlinux-appstream-data
 archlinux-keyring
 argon2
 aria2
@@ -108,7 +107,6 @@ dialog
 diffutils
 discord
 discount
-discover
 djvulibre
 dkms
 dmidecode
@@ -1028,7 +1026,6 @@ qt6-wayland
 qt6-webchannel
 qt6-webengine
 qt6-websockets
-qt6-webview
 ragel
 raptor
 rasqal
