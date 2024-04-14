@@ -76,6 +76,9 @@ alias verify_journal='sudo journalctl --verify'
 # gparted
 alias gparted='sudo --preserve-env gparted'
 
+# sublime (as root)
+alias SS='sudo --preserve-env subl'
+
 # 'neofetch'
 alias neo='clear && neofetch'
 
