@@ -73,6 +73,9 @@ alias running_services='systemctl list-unit-files | bat'
 alias systemd_failed='systemctl --failed'
 alias verify_journal='sudo journalctl --verify'
 
+# gparted
+alias gparted='sudo --preserve-env gparted'
+
 # 'neofetch'
 alias neo='clear && neofetch'
 
