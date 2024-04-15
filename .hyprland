@@ -12,7 +12,7 @@ Meta + Escape                   Restart 'XDG portals'
 
 Meta + F1                       Toggle 'gamemode'
 Meta + F                        Toggle 'fullscreen' on the 'focussed' window.
-Meta + J                        Toggle 'split' mode
+Meta + S                        Toggle 'split' mode
 Meta + P                        Toggle 'pseudo' windows
 Meta + T                        Toggle 'floating' for the 'focussed' window
 Meta + Alt + Ctrl + T           Toggle 'floating' for 'all' windows
@@ -28,6 +28,7 @@ Meta + Alt + Ctrl + V           Clear the 'clipboard'
 Meta + Alt + Ctrl + N           Restore the last 'notification'
 
 Meta + Q                        Close the 'focussed' window
+Meta + Escape                   Close the 'focussed' window
 
 Meta + ArrowUp                  Move the 'focus' on the window on the 'left'   of the current one
 Meta + ArrowDown                Move the 'focus' on the window on the 'right'  of the current one
@@ -78,14 +79,13 @@ Meta + Alt + Ctrl + 0           Move the 'focussed' window to workspace '10'
 Meta + ScrollDown               Cycle through active 'desktops'
 Meta + ScrollUp                 Cycle through active 'desktops' (Reverse)
 
-Menu,                           Open 'wofi'
+Menu,                           Open 'Application List'
 Print                           Open 'hp-print'
 Scroll_lock                     Open 'hyprshot-gui'
 
 Meta + A,                       Open 'Amarok'
 Meta + C,                       Open 'Calculator'
 Meta + K,                       Open 'KDE Settings'
-Meta + S,                       Open 'Pavucontrol'
 
 Meta + Alt + Ctrl + Return      Open 'Konsole'
 Meta + Alt + Return             Open 'Alacritty'
