@@ -1,0 +1,29 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "magnify",
+]
+
+[scratchpads.amarok]
+animation = "fromTop"
+command = "amarok"
+class = "org.kde.amarok"
+lazy = true
+size = "80% 75%"
+margin = 56
+
+[scratchpads.kcalc]
+animation = "fromTop"
+command = "kcalc"
+class = "org.kde.kcalc"
+lazy = true
+size = "20% 35%"
+margin = 56
+
+[scratchpads.kdesystemsettings]
+animation = "fromTop"
+command = "systemsettings"
+class = "kdesystemsettings"
+lazy = true
+size = "70% 70%"
+margin = 56
