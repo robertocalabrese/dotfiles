@@ -6,6 +6,8 @@
 	#pager = less -iXFR
     pager = bat --paging=never
     precomposeunicode = true
+#[push]
+#    autoSetupRemote = true
 [init]
     defaultBranch = main
 [alias]
