@@ -105,11 +105,12 @@ tooltip label {
 }
 
 #custom-weather {
-    padding: 2px 5px;
+    padding: 0px 5px 2px 15px;
     transition: none;
     color: #f8f8f2;
     background: rgba(26,27,38,0);
-    font-size: 22px;
+    font-size: 23px;
+    font-weight: bold;
 }
 
 /* ################
