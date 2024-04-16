@@ -27,7 +27,7 @@ Meta + Alt + Ctrl + V           Clear the 'clipboard'
 
 Meta + Alt + Ctrl + N           Restore the last 'notification'
 
-Escape                          Close the 'focussed' window
+Meta + Q                        Close the 'focussed' window
 
 Meta + ArrowUp                  Move the 'focus' on the window on the 'left'   of the current one
 Meta + ArrowDown                Move the 'focus' on the window on the 'right'  of the current one
