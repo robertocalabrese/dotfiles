@@ -4,7 +4,7 @@
     "always_show_minimap_viewport": true,
 
     // Enable auto complete to be triggered automatically when typing.
-    //"auto_complete": true,
+    "auto_complete": false,
 
     // Calculates indentation automatically when pressing enter
     "auto_indent": true,
