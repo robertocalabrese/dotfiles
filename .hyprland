@@ -79,6 +79,7 @@ Meta + ScrollDown               Cycle through active 'desktops'
 Meta + ScrollUp                 Cycle through active 'desktops' (Reverse)
 
 Menu,                           Open 'Application List'
+Meta + Menu                     Open 'Program List'
 Print                           Open 'hp-print'
 Scroll_lock                     Open 'hyprshot-gui'
 
