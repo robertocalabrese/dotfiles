@@ -35,7 +35,8 @@
 	"custom/menu": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "wofi --show drun"
+		"on-click": "wofi --show drun",
+		"on-click-right": "wofi --show run"
 	},
 
 	"hyprland/workspaces" : {
