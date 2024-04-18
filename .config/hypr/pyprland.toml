@@ -4,26 +4,10 @@ plugins = [
   "magnify",
 ]
 
-[scratchpads.amarok]
-animation = "fromTop"
-command = "amarok"
-class = "org.kde.amarok"
-lazy = true
-size = "80% 75%"
-margin = 63
-
 [scratchpads.kcalc]
 animation = "fromTop"
 command = "kcalc"
 class = "org.kde.kcalc"
 lazy = true
 size = "20% 35%"
-margin = 63
-
-[scratchpads.kdesystemsettings]
-animation = "fromTop"
-command = "systemsettings"
-class = "kdesystemsettings"
-lazy = true
-size = "70% 70%"
 margin = 63

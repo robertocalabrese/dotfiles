@@ -22,9 +22,6 @@ Meta + W                        Toggle 'Waybar' visibility
 Meta + Alt + W                  Reload 'Waybar' (only style.css)
 Meta + Alt + Ctrl + W           Reload 'Waybar' (config + style.css)
 
-Meta + V                        Open  the 'clipboard'
-Meta + Alt + Ctrl + V           Clear the 'clipboard'
-
 Meta + Alt + Ctrl + N           Restore the last 'notification'
 
 Meta + Q                        Close the 'focussed' window
@@ -92,9 +89,8 @@ Meta + Alt + F                  Open 'Firefox'
 Meta + Alt + G                  Open 'Gimp'
 Meta + Alt + I                  Open 'Inkscape'
 Meta + Alt + K,                 Open 'KDE Settings'
+Meta + Alt + M,                 Open 'Weather Forecast'
 Meta + Alt + N                  Open 'Netflix'
-Meta + Alt + P                  Open 'Color Picker HEX'
-Meta + Alt + Ctrl + P           Open 'Color Picker RGB'
 Meta + Alt + Q                  Open 'Qbittorrent'
 Meta + Alt + S                  Open 'Sublime Text'
 Meta + Alt + T                  Open 'Tor Browser'
