@@ -104,29 +104,11 @@ tooltip label {
 	font-weight: normal;
 }
 
-#custom-weather {
-    padding: 0px 5px 2px 15px;
-    transition: none;
-    color: #f8f8f2;
-    background: rgba(26,27,38,0);
-    font-size: 23px;
-    font-weight: bold;
-}
-
 /* ################
  * ## Right side ##
  * ################ */
 
  #custom-packages {
-	color: #f8f8f2;
-	background: rgba(26,27,38,0);
-	margin: 5px;
-	padding: 2px 5px;
-	font-size: 20px;
-	font-weight: normal;
-}
-
-#custom-mediaplayer {
 	color: #f8f8f2;
 	background: rgba(26,27,38,0);
 	margin: 5px;
@@ -141,6 +123,15 @@ tooltip label {
 	margin: 5px;
 	padding: 2px 5px;
 	font-size: 16px;
+	font-weight: normal;
+}
+
+#custom-picker {
+	color: #f8f8f2;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 22px;
 	font-weight: normal;
 }
 

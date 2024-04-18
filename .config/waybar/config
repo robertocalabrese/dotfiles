@@ -13,14 +13,13 @@
 	],
 
 	"modules-center": [
-		"clock",
-		"custom/weather"
+		"clock"
 	],
 
 	"modules-right": [
 		"custom/packages",
-		"custom/mediaplayer",
 		"tray",
+		"custom/picker",
 		"idle_inhibitor",
 		"temperature",
 		"cpu",
@@ -72,15 +71,6 @@
 		"tooltip": false
 	},
 
-	"custom/weather": {
-		"format": "{}",
-		"tooltip": false,
-		"interval": 1800,
-		"exec": "$HOME/.config/waybar/scripts/wttr.py",
-		"on-click": "$HOME/.config/waybar/scripts/weather_forecast.sh",
-		"return-type": "json"
-	},
-
 	// ################
 	// ## Right side ##
 	// ################
@@ -94,20 +84,16 @@
 		"tooltip": false
 	},
 
-	"custom/mediaplayer": {
-		"format": "{}",
-		"return-type": "json",
-		"max-length": 40,
-		"escape": true,
-		"on-click": "playerctl play-pause",
-		"on-scroll-up": "playerctl previous",
-		"on-scroll-down": "playerctl next",
-		"exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
-	},
-
 	"tray": {
 		"icon-size": 24,
 		"spacing": 20
+	},
+
+	"custom/picker": {
+		"format": "󰴱",
+		"on-click": "hyprpicker -a -f hex -z",
+		"on-click-right": "hyprpicker -a -f rgb -z",
+		"tooltip": false
 	},
 
 	"idle_inhibitor": {
