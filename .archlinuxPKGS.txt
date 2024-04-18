@@ -74,7 +74,6 @@ cfitsio
 chromaprint
 cifs-utils
 clinfo
-cliphist
 clucene
 cmake
 colord
