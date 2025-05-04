@@ -1,0 +1,125 @@
+/* Author:  Roberto Calabrese a.k.a. Kicka
+ * City:    Palermo, Sicily
+ * Country: Italy
+ */
+
+* {
+	font-family: Ubuntu Nerd Font, sans-serif;
+	font-size: 30pt;
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(12, 12, 12, 0.9);
+}
+
+button {
+    border-radius: 0;
+    border-color: black;
+	text-decoration-color: #FFFFFF;
+    color: #FFFFFF;
+	background-color: #1E1E1E;
+	border-color: #1E1E1E;
+	border-style: solid;
+	border-width: 4px;
+	margin: 4px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20%;
+}
+
+button:focus {
+    background-size: 25%;
+    border: 0px;
+    outline-style: none;
+	border-radius: 0;
+	border-style: solid;
+	border-color: #bd93f9;
+	border-width: 4px;
+	margin: 4px;
+	color: #bd93f9;
+    animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:hover, button:active {
+	background-color: #bd93f9;
+	color: #1E1E1E;
+	outline-style: none;
+	background-size: 25%;
+	animation: gradient_f 20s ease-in infinite;
+	transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+#lock {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/lock_white.png"));
+}
+
+#lock:focus {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/lock_purple.png"));
+}
+
+#lock:hover {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/lock_gray.png"));
+}
+
+#logout {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/logout_white.png"));
+}
+
+#logout:focus {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/logout_purple.png"));
+}
+
+#logout:hover {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/logout_gray.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/suspend_white.png"));
+}
+
+#suspend:focus {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/suspend_purple.png"));
+}
+
+#suspend:hover {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/suspend_gray.png"));
+}
+
+#hibernate {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/hibernate_white.png"));
+}
+
+#hibernate:focus {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/hibernate_purple.png"));
+}
+
+#hibernate:hover {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/hibernate_gray.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/shutdown_white.png"));
+}
+
+#shutdown:focus {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/shutdown_purple.png"));
+}
+
+#shutdown:hover {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/shutdown_gray.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/reboot_white.png"));
+}
+
+#reboot:focus {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/reboot_purple.png"));
+}
+
+#reboot:hover {
+    background-image: image(url("/home/kicka/.config/wlogout/icons/reboot_gray.png"));
+}
