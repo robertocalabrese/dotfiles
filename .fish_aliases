@@ -1,0 +1,244 @@
+# Author:   Roberto Calabrese a.k.a. Kicka
+# City:     Palermo, Sicily
+# Country:  Italy
+
+###############################
+##                           ##
+##     FOLDER NAVIGATION     ##
+##                           ##
+###############################
+
+alias .='cd ..'                 # 1 folder  back
+alias ..='cd ../..'             # 2 folders back
+alias ...='cd ../../..'         # 3 folders back
+alias ....='cd ../../../..'     # 4 folders back
+alias .....='cd ../../../../..' # 5 folders back
+
+#####################
+##                 ##
+##     HISTORY     ##
+##                 ##
+#####################
+
+alias h='history | tac | bat --paging=never'
+
+###################################
+##                               ##
+##     'eza' INSTEAD OF 'ls'     ##
+##                               ##
+###################################
+alias ls='eza -al --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # my preferred listing
+alias la='eza -a  --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # all files and dirs
+alias ll='eza -l  --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # long format
+alias lt='eza -aT --color=always --icons --git --group-directories-first --header --no-permissions --octal-permissions ' # tree listing
+alias lf.='eza -af | grep "^\."' # dot files only
+alias ld.='eza -aD | grep "^\."' # dot folders only
+
+############################################################
+##                                                        ##
+##     ADDING SOME FLAGS TO SOME VERY COMMON COMMANDS     ##
+##                                                        ##
+############################################################
+
+alias cp='cp -i'                      # Confirm before copying the file/s.
+alias df='df -h'
+alias dir='dir --color=auto'          # Colorize 'dir' output.
+alias free='free -m'
+alias grep='grep --color=tty -d skip' # Colorize 'grep' output.
+alias mkdir='mkdir -p'
+alias mv='mv -i'                      # Confirm before moving the file/s.
+alias rm='rm -i'                      # Confirm before removing the file/s.
+alias vdir='vdir --color=auto'        # Colorize 'vdir' output.
+alias wget='wget -c'
+
+###################
+##               ##
+##     CHOWN     ##
+##               ##
+###################
+
+alias chownUser='sudo chown $USER:users'
+alias chownRoot='sudo chown root:root'
+
+#################################
+##                             ##
+##     COMPRESS/DECOMPRESS     ##
+##                             ##
+#################################
+
+alias compress='tar -cvpzf'
+alias decompress='tar -xvpzf'
+
+##########################
+##                      ##
+##     RELOAD FONTS     ##
+##                      ##
+##########################
+
+alias reload_fonts='fc-cache -fv && sudo fc-cache -fv'
+
+#####################
+##                 ##
+##     SYSTEMD     ##
+##                 ##
+#####################
+
+alias boot_time='systemd-analyze'
+alias boot_chart='systemd-analyze blame'
+alias last_journal='sudo journalctl -b'
+alias running_services='systemctl list-unit-files | bat'
+alias systemd_failed='systemctl --failed'
+alias verify_journal='sudo journalctl --verify'
+
+######################
+##                  ##
+##     PROGRAMS     ##
+##                  ##
+######################
+alias gparted='sudo --preserve-env gparted'
+alias SS='sudo --preserve-env subl'
+
+if [ "$DESKTOP_SESSION" = "hyprland" ]
+	alias last_notification='makoctl restore'
+else
+	alias KDE='sudo dbus-launch systemsettings'
+	alias restart_plasma='systemctl --user restart plasma-plasmashell.service'
+end
+
+##############################
+##                          ##
+##     YOUTUBE DOWNLOAD     ##
+##                          ##
+##############################
+
+alias youtube_video='yt-dlp --ignore-errors --external-downloader aria2c --external-downloader-args "-c -j 3 -x 3 -s 3 -k 1M" -f bestvideo+bestaudio'
+alias youtube_audio='yt-dlp --ignore-errors --external-downloader aria2c --external-downloader-args "-c -j 3 -x 3 -s 3 -k 1M" -f bestvideo+bestaudio -x --audio-format mp3 --audio-quality 320k'
+
+#######################
+##                   ##
+##     ARCHLINUX     ##
+##                   ##
+#######################
+
+alias bbb='clear && bat -l bash --paging=never ~/.bash_aliases'
+alias fff='clear && bat -l bash --paging=never ~/.fish_aliases'
+alias ggg='clear && bat -l bash --paging=never ~/.git_aliases'
+alias hhh='clear && bat -l bash --paging=never ~/.hyprland'
+alias ppp='clear && bat -l bash --paging=never ~/.plasma'
+
+alias arch_news='yay -Pww'
+alias Makepkg='makepkg -g >> PKGBUILD && makepkg -i'
+alias pacman_unlock='sudo rm /var/lib/pacman/db.lck'
+alias update_mirrors='sudo reflector -c Albania,Austria,Belgium,Bulgaria,Croatia,Czechia,Denmark,France,Germany,Greece,Hungary,Italy,Luxembourg,Netherlands,Poland,Portugal,Romania,Serbia,Slovakia,Slovenia,Spain,Switzerland,UnitedKingdom -a 6 --sort rate --protocol https --verbose --save /etc/pacman.d/mirrorlist'
+alias update_pkgfile='sudo pkgfile --update'
+
+alias lock='wlogout -b 2'
+alias logout='wlogout -b 2'
+alias reboot='wlogout -b 2'
+alias shutdown='wlogout -b 2'
+
+alias search='yay -Ss'
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Runs'
+alias force_remove='sudo pacman -Rdd'
+
+alias update='sudo pacman -Syy'
+alias upgrade='sudo pacman -Syyu --noconfirm --needed && yay -Sua --needed --noconfirm'
+alias cleanup='~/.local/bin/cleanup.sh'
+
+####################
+##                ##
+##     DEBIAN     ##
+##                ##
+####################
+
+#alias bbb='clear && bat -l bash --paging=never ~/.bash_aliases'
+#alias fff='clear && bat -l bash --paging=never ~/.fish_aliases'
+#alias ggg='clear && bat -l bash --paging=never ~/.git_aliases'
+#alias ppp='clear && bat -l bash --paging=never ~/.plasma'
+
+#alias eza='exa'
+#
+#alias search='apt search'
+#alias install='sudo apt install'
+#alias remove='sudo apt remove --purge'
+
+#alias logout='pkill -u $USER'
+#alias reboot='systemctl reboot'
+#alias shutdown='systemctl poweroff'
+
+#alias update='sudo apt update'
+#alias upgrade='sudo apt update && sudo apt upgrade'
+#alias dist-upgrade='sudo apt update && sudo apt dist-upgrade'
+#alias cleanup='sudo apt autoremove'
+
+####################
+##                ##
+##     UBUNTU     ##
+##                ##
+####################
+
+#alias bbb='clear && bat -l bash --paging=never ~/.bash_aliases'
+#alias fff='clear && bat -l bash --paging=never ~/.fish_aliases'
+#alias ggg='clear && bat -l bash --paging=never ~/.git_aliases'
+
+#alias search='apt search'
+#alias install='sudo apt install'
+#alias remove='sudo apt remove --purge'
+
+#alias logout='pkill -u $USER'
+#alias reboot='systemctl reboot'
+#alias shutdown='systemctl poweroff'
+
+#alias update='sudo apt update'
+#alias upgrade='sudo apt update && sudo apt upgrade'
+#alias dist-upgrade='sudo apt update && sudo apt dist-upgrade'
+#alias cleanup='sudo apt autoremove'
+
+####################
+##                ##
+##     FEDORA     ##
+##                ##
+####################
+
+#alias bbb='clear && bat -l bash --paging=never ~/.bash_aliases'
+#alias fff='clear && bat -l bash --paging=never ~/.fish_aliases'
+#alias ggg='clear && bat -l bash --paging=never ~/.git_aliases'
+#alias ppp='clear && bat -l bash --paging=never ~/.plasma'
+
+#alias search='dnf search'
+#alias install='sudo dnf install'
+#alias remove='sudo dnf remove'
+
+#alias logout='pkill -u $USER'
+#alias reboot='systemctl reboot'
+#alias shutdown='systemctl poweroff'
+
+#alias update='sudo dnf check-update'
+#alias upgrade='sudo dnf upgrade'
+#alias dist-upgrade='sudo dnf system-upgrade'
+#alias cleanup='sudo dnf autoremove'
+
+######################
+##                  ##
+##     OPENSUSE     ##
+##                  ##
+######################
+
+#alias bbb='clear && bat -l bash --paging=never ~/.bash_aliases'
+#alias fff='clear && bat -l bash --paging=never ~/.fish_aliases'
+#alias ggg='clear && bat -l bash --paging=never ~/.git_aliases'
+#alias ppp='clear && bat -l bash --paging=never ~/.plasma'
+
+#alias search='zypper search'
+#alias install='sudo zypper install'
+#alias remove='sudo zypper remove -u --clean-deps'
+
+#alias logout='pkill -u $USER'
+#alias reboot='systemctl reboot'
+#alias shutdown='systemctl poweroff'
+
+#alias update='sudo zypper refresh'
+#alias upgrade='sudo zypper refresh && sudo zypper update -l'
+#alias dist-upgrade='sudo zypper refresh && sudo zypper dist-upgrade -l'
+#alias cleanup='sudo zypper clean -a && sudo zypper purge-kernels'
