@@ -1,0 +1,250 @@
+/* Author:  Roberto Calabrese a.k.a. Kicka
+ * City:    Palermo, Sicily
+ * Country: Italy
+ */
+
+/* ####################
+ * ##                ##
+ * ##     GLOBAL     ##
+ * ##                ##
+ * #################### */
+
+* {
+	font-family: Ubuntu Nerd Font, sans-serif;
+}
+
+window#waybar {
+	background-color: rgba(26,27,38,0.4);
+	border-bottom: 1px solid rgba(26,27,38,0);
+	border-radius: 0px;
+	color: #bd93f9;
+}
+
+tooltip {
+  background: #1a1b26;
+  border: 1px solid #bd93f9;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+tooltip label {
+  color: #bd93f9;
+  padding: 0.25em;
+  font-size: 20px;
+	font-weight: normal;
+}
+
+/* #######################
+ * ##                   ##
+ * ##     LEFT SIDE     ##
+ * ##                   ##
+ * ####################### */
+
+#custom-menu {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#workspaces {
+	margin: 5px;
+	padding: 2px 5px;
+	border-radius: 15px;
+	border: 0px;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 20px;
+	font-weight: bold;
+	color: #15161e;
+}
+
+#workspaces button {
+	padding: 0px 10px;
+	margin: 0px 5px;
+	border-radius: 15px;
+	border: 0px;
+	color: #bd93f9;
+	transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+	color: #15161e;
+	background: #bd93f9;
+	border-radius: 15px;
+	min-width: 40px;
+	transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+	color: #15161e;
+	background: #bd93f9;
+	border-radius: 15px;
+}
+
+#window {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+/* ####################
+ * ##                ##
+ * ##     CENTER     ##
+ * ##                ##
+ * #################### */
+
+#clock {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+/* ########################
+ * ##                    ##
+ * ##     RIGHT SIDE     ##
+ * ##                    ##
+ * ######################## */
+
+ #custom-packages {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#tray {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#mpris {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+#custom-wallpaper {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#custom-picker {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+#idle_inhibitor {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+#battery {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#temperature {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#cpu {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#memory {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#network {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#pulseaudio {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#custom-microphone {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#battery {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#custom-exit {
+	color: #bd93f9;
+	background: rgba(26,27,38,0);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 20px;
+	font-weight: normal;
+}
