@@ -1,0 +1,24 @@
+# Author:  Roberto Calabrese a.k.a. Kicka
+# City:    Palermo, Sicily
+# Country: Italy
+
+# ####################################
+# ##                                ##
+# ##     PYPRLAND CONFIGURATION     ##
+# ##                                ##
+# ####################################
+
+[pyprland]
+plugins = [
+  "scratchpads",
+  "magnify",
+]
+
+[scratchpads.kcalc]
+animation = "fromTop"
+command = "kcalc"
+class = "org.kde.kcalc"
+lazy = true
+size = "20% 35%"
+margin = 63
+pinned = false
