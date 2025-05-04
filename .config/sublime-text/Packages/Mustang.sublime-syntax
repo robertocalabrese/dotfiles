@@ -1,0 +1,470 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: "Mustang"
+file_extensions:
+  - tcl
+  - tk
+  - tm
+  - bawt
+scope: source.tcl
+variables:
+  special_chars: '[;{}\[\]"\\]'
+  unquoted_string: '[^\s{{special_chars}}][^\s${{special_chars}}]*'
+  end_chars: '[;\n\}\]]'
+  inline_end_chars: '[;\s\}\]\\]'
+  var_unquoted_string: '(?:\$\{[^ \}]+\}|{{unquoted_string}})+'
+  most_likely_code: 'after|append|apply|argc|argv|argv0|array|auto_execok|auto_import|auto_load|auto_mkindex|auto_path|auto_qualify|auto_reset|bgerror|binary|break|callback|catch|cd|chan|checkclr|classvariable|clock|close|concat|continue|cookiejar|coroutine|dde|dict|encoding|env|eof|error|errorCode|errorInfo|eval|exec|exit|expr|fblocked|fconfigure|fcopy|file|fileevent|filename|flush|for|foreach|format|fpclassify|gets|glob|global|history|hidecur|if|incr|info|interp|join|lappend|lassign|lerp|lindex|linsert|link|list|llength|lmap|load|lpop|lrange|lremove|lrepeat|lreplace|lreverse|lsearch|lset|lsort|mathfunc|mathop|memory|::msgcat::mc|::msgcat::mcload|::msgcat::mclocale|msgcat::mcflmset|my|myclass|mymethod|namespace|next|nextto|oo::abstract|oo::class|oo::copy|oo::define|oo::objdefine|oo::object|oo::singleton|open|package|parray|pid|pkg::create|pkg_mkIndex|platform::generic|platform::identify|platform::patterns|platform::shell::generic|platform::shell::identify|platform::shell::platform|proc|puts|pwd|re_syntax|read|refchan|regexp|registry|regsub|rename|return|round|safe|scan|seek|self|set|socket|source|split|starkit::mode|starkit::startup|starkit::topdir|string|subst|switch|tailcall|tcl::idna|tcl::prefix|tcl::process|tcl_endOfWord|tcl_findLibrary|tcl_interactive|tcl_library|tcl_nonwordchars|tcl_patchLevel|tcl_pkgPath|tcl_precision|tcl_rcFileName|tcl_startOfNextWord|tcl_startOfPreviousWord|tcl_traceCompile|tcl_traceExec|tcl_version|tcl_wordBreakAfter|tcl_wordBreakBefore|tcl_wordchars|tcltest|tell|throw|time|timerate|tm|trace|transchan|translate|try|unknown|unload|unset|update|uplevel|upvar|variable|vwait|while|yield|yieldto|zipfs|zlib|bell|bind|_bind|bindtags|bitmap|busy|button|canvas|checkbutton|clipboard|console|destroy|entry|event|focus|font|fontchooser|frame|_frame|geometry|grab|grid|image|jaws|keysyms|label|_label|labelframe|listbox|lower|menu|menubutton|message|option|pack|panedwindow|place|radiobutton|raise|safe::loadTk|scale|scrollbar|selection|send|spinbox|style|text|tk|tk::mac|tk_bisque|tk_chooseColor|tk_chooseDirectory|tk_dialog|tk_focusFollowsMouse|tk_focusNext|tk_focusPrev|tk_getOpenFile|tk_getSaveFile|tk_library|tk_menuSetFocus|tk_messageBox|tk_optionMenu|tk_patchLevel|tk_popup|tk_setPalette|tk_strictMotif|tk_textCopy|tk_textCut|tk_textPaste|tk_version|tk::mac|tkerror|tkwait|toplevel|_toplevel|ttk::bindMouseWheel|ttk::button|ttk::center|ttk::checkbutton|ttk::combobox|ttk::copyBindings|::ttk::CheckCargoOptionName|::ttk::CheckMeasure|::ttk::ConvertMeasure|ttk::deprecated|ttk::entry|::ttk::FindToplevel|ttk::frame|_ttk_frame|ttk::label|_ttk_label|ttk::labelframe|::ttk::MaximizeToplevel|ttk::menubutton|ttk::notebook|ttk::panedwindow|::ttk::Parent|ttk::progressbar|ttk::radiobutton|ttk::Repeatedly|ttk::scale|ttk::scrollbar|_ttk_scrollbar|ttk::selindices|ttk::separator|ttk::sizegrip|ttk::spinbox|ttk::style|_ttk_style|::ttk::ThemeChanged|::ttk::themes|::ttk::TraceThemeChanged|ttk::treeview|winfo|_winfo|wm|_wm'
+
+contexts:
+  main:
+    - include: commands
+
+  commands:
+    - match: ^(?=\s*[^\[\{])
+      push: command-name
+    - match: ';'
+      scope: punctuation.terminator.tcl
+      push: command-name
+    - match: '(?={{most_likely_code}})'
+      push: command-name
+    - include: expressions
+
+  continued-line:
+    - match: (?={{end_chars}})
+      pop: true
+    - match: '^(?=\s*#)'
+      push:
+        - match: '#'
+          scope: comment.line.number-sign.tcl punctuation.definition.comment.tcl
+          set:
+            - meta_content_scope: comment.line.number-sign.tcl
+            - match: \n
+              pop: true
+            - match: \\\\
+            - match: \\\n
+              scope: punctuation.separator.continuation.tcl
+    - include: expressions
+
+  expressions:
+    - match: \\(?=\n)
+      scope: punctuation.separator.continuation.tcl
+      push:
+        - match: \n
+        - match: (?=\S)
+          set: continued-line
+    - include: braces
+    - include: substitution
+    - include: escape
+    - include: variable
+    - include: numbers
+    - include: strings
+
+  strings:
+    - match: '"'
+      scope: punctuation.definition.string.begin.tcl
+      push:
+        - meta_scope: string.quoted.double.tcl
+        - match: '"'
+          scope: punctuation.definition.string.end.tcl
+          pop: true
+        - match: \\(?=\n)
+          scope: punctuation.separator.continuation.tcl
+          push:
+            - match: \n
+            - match: (?=\S)
+              pop: true
+        - include: escape
+        - include: variable
+        - match: '(?=\[(?!{{special_chars}}))'
+          push:
+            - clear_scopes: 1
+            - include: substitution
+            - match: ''
+              pop: true
+    - match: '{{unquoted_string}}'
+
+  numbers:
+    - match: \b0x\h*\b(?={{inline_end_chars}})
+      scope: constant.numeric.integer.tcl
+    - match: \b0b[01]*\b(?={{inline_end_chars}})
+      scope: constant.numeric.integer.tcl
+    - match: \b0o[0-7]*\b(?={{inline_end_chars}})
+      scope: constant.numeric.integer.tcl
+    - match: \b[0-9]+\.[0-9]+\b(?={{inline_end_chars}})
+      scope: constant.numeric.float.tcl
+    - match: \b[0-9]+\b(?={{inline_end_chars}})
+      scope: constant.numeric.integer.tcl
+    - match: '#[a-fA-F0-9]{3}(?={{inline_end_chars}})'
+      scope: hex
+    - match: '#[a-fA-F0-9]{6}(?={{inline_end_chars}})'
+      scope: hex
+    - match: '#[a-fA-F0-9]{9}(?={{inline_end_chars}})'
+      scope: hex
+    - match: '#[a-fA-F0-9]{12}(?={{inline_end_chars}})'
+      scope: hex
+
+  comments:
+    - match: '#'
+      scope: comment.line.number-sign.tcl punctuation.definition.comment.tcl
+      set:
+        - meta_content_scope: comment.line.number-sign.tcl
+        - match: \n
+          scope: comment.line.number-sign.tcl
+          pop: true
+        - match: \\\\
+        - match: \\\n
+          scope: punctuation.separator.continuation.tcl
+
+  command-name:
+    - match: '(?=\bproc\b\s)'
+      set: proc
+    - match: '\bexpr\b(?=\s)'
+      scope: keyword.other.tcl
+      set: expr
+    - match: \b(namespace)\s+eval\s+({{var_unquoted_string}})
+      captures:
+        1: keyword.other.tcl
+        2: entity.name.namespace.tcl
+      set:
+        - meta_scope: meta.namespace.tcl
+        - match: '(?={{end_chars}})'
+          pop: true
+        - include: commands
+    - match: \b(if)\b\s+(\{)
+      captures:
+        1: keyword.control.tcl
+        2: meta.block.tcl punctuation.section.block.begin.tcl
+      set: [conditional, conditional-expr]
+    - match: \b(if)\b\s+(?=\S)
+      captures:
+        1: keyword.control.tcl
+        2: meta.block.tcl punctuation.section.block.begin.tcl
+      set: [conditional, conditional-bare-expr]
+    - match: (^\bset\b)
+      scope: keyword.other.tcl
+      push:
+        - match: \b\w+\b
+          set:
+            - match: '\{(?=(\n|\s*({{most_likely_code}})))'
+              scope: punctuation.section.block.begin.tcl
+              set: [command-braces, command-name]
+            - match: '\{(?=\s)'
+              scope: punctuation.section.block.begin.tcl
+              set: non-command-braces
+            - match: '\{'
+              scope: punctuation.definition.string.begin.tcl
+              set: string-braces
+            - match: '(?=\S)'
+              set:
+                - match: (?={{inline_end_chars}})
+                  pop: true
+                - include: expressions
+    - match: \b(while|for|catch|return|break|continue|switch|exit|foreach)\b(?=[{{inline_end_chars}}])
+      scope: keyword.control.tcl
+      set:
+        - match: '(?={{end_chars}})'
+          pop: true
+        - include: expr-body
+    - match: '\b(after|append|apply|argc|argv|argv0|array|auto_execok|auto_import|auto_load|auto_mkindex|auto_path|auto_qualify|auto_reset|bgerror|binary|break|callback|catch|cd|chan|checkclr|classvariable|clock|close|color|concat|continue|cookiejar|coroutine|dde|dict|encoding|env|eof|error|errorCode|errorInfo|eval|exec|exit|expr|fblocked|fconfigure|fcopy|file|fileevent|filename|flush|for|foreach|format|fpclassify|gets|glob|global|history|hidecur|if|incr|info|interp|join|lappend|lassign|lerp|lindex|linsert|link|list|llength|lmap|load|lock|lpop|lrange|lremove|lrepeat|lreplace|lreverse|lsearch|lset|lsort|mathfunc|mathop|memory|::msgcat::mc|::msgcat::mcload|::msgcat::mclocale|::msgcat::mcflmset|my|myclass|mymethod|namespace|next|nextto|oo::abstract|oo::class|oo::copy|oo::define|oo::objdefine|oo::object|oo::singleton|open|package|parray|pid|pkg::create|pkg_mkIndex|platform|platform::shell|platform::generic|platform::identify|platform::patterns|platform::shell::generic|platform::shell::identify|platform::shell::platform|proc|puts|pwd|re_syntax|read|refchan|regexp|registry|regsub|rename|return|round|safe|scan|seek|self|set|socket|source|split|starkit::mode|starkit::startup|starkit::topdir|string|subst|switch|tailcall|tcl::idna|tcl::prefix|tcl::process|tcl_endOfWord|tcl_findLibrary|tcl_interactive|tcl_library|tcl_nonwordchars|tcl_patchLevel|tcl_pkgPath|tcl_precision|tcl_rcFileName|tcl_startOfNextWord|tcl_startOfPreviousWord|tcl_traceCompile|tcl_traceExec|tcl_version|tcl_wordBreakAfter|tcl_wordBreakBefore|tcl_wordchars|tcltest|tell|throw|time|timerate|tm|trace|transchan|translate|try|unknown|unload|unlock|unset|update|uplevel|upvar|variable|vwait|while|yield|yieldto|zipfs|zlib)\b'
+      scope: keyword.other.tcl
+      pop: true
+    - match: '\b(bell|bind|_bind|bindtags|bitmap|busy|button|canvas|checkbutton|clipboard|console|destroy|dialog|entry|event|focus|font|fontchooser|frame|_frame|geometry|grab|grid|image|jaws|keysyms|label|_label|labelframe|listbox|lower|menu|menubutton|message|option|pack|panedwindow|place|radiobutton|raise|safe::loadTk|scale|scrollbar|selection|send|spinbox|style|text|tk|tk::mac|tk_bisque|tk_chooseColor|tk_chooseDirectory|tk_dialog|tk_focusFollowsMouse|tk_focusNext|tk_focusPrev|tk_getOpenFile|tk_getSaveFile|tk_library|tk_menuSetFocus|tk_messageBox|tk_optionMenu|tk_patchLevel|tk_popup|tk_setPalette|tk_strictMotif|tk_textCopy|tk_textCut|tk_textPaste|tk_version|tk::mac|tkerror|tkwait|toplevel|_toplevel|ttk::bindMouseWheel|ttk::button|ttk::center|ttk::checkbutton|ttk::combobox|ttk::copyBindings|ttk::entry|ttk::frame|_ttk_frame|ttk::label|_ttk_label|ttk::labelframe|ttk::menubutton|ttk::notebook|ttk::panedwindow|ttk::progressbar|ttk::radiobutton|ttk::Repeatedly|ttk::scale|ttk::scrollbar|_ttk_scrollbar|ttk::selindices|ttk::separator|ttk::sizegrip|ttk::spinbox|ttk::style|_ttk_style|ttk::treeview|winfo|_winfo|wm|_wm)\b'
+      scope: keyword.other.tk
+      pop: true
+    - match: '\b(regexp|regsub)\b(?=\s)'
+      captures:
+        1: keyword.other.tcl
+      set:
+        - match: '(?={{end_chars}})'
+          pop: true
+        # Consume the switches (https://www.tcl.tk/man/tcl8.4/TclCmd/regexp.htm)
+        - match: '\s+-(about|all|expanded|indices|inline|linestop|lineanchor|line|nocase|start\s+\b[0-9]+)\b(?=\s)'
+        # The next non-space element will be a regex string
+        - match: '(?=\{|\s+--\s+)'
+          set:
+            - match: \s+(--)\s+
+              captures:
+                1: punctuation.separator.tcl
+            - match: \{
+              set:
+                - meta_content_scope: string.regexp.tcl
+                - match: \}
+                  pop: true
+                - include: regexp-braces
+            - match: '(?=")'
+              set:
+                - include: strings
+                # One of these characters indicates the string is complete
+                - match: '(?={{inline_end_chars}})'
+                  pop: true
+            - match: '(?=\S)'
+              set:
+                - meta_content_scope: string.regexp.tcl
+                # One of these characters indicates the string is complete
+                - match: '(?={{inline_end_chars}})'
+                  pop: true
+        - match: '(?=")'
+          set:
+            - include: strings
+            # One of these characters indicates the string is complete
+            - match: '(?={{inline_end_chars}})'
+              pop: true
+        - match: '(?=\S)'
+          set:
+            - meta_content_scope: string.regexp.tcl
+            # One of these characters indicates the string is complete
+            - match: '(?={{inline_end_chars}})'
+              pop: true
+    - match: (?=#)
+      set: comments
+    - match: '(::ttk|ttk::|::tk_)([^{{inline_end_chars}}]*)'
+      scope: keyword.other.tk
+      pop: true
+    - match: '(::)([^{{inline_end_chars}}]*)'
+      scope: proc.function.tcl
+      pop: true
+    - match: '(?={{var_unquoted_string}})'
+      set:
+        - meta_content_scope: variable.function.tcl
+        - include: variable
+        - match: '{{unquoted_string}}'
+        - match: ''
+          pop: true
+    - match: '(?=\S)'
+      pop: true
+
+  regexp-braces:
+    - match: \{
+      push:
+        - match: \}
+          pop: true
+        - include: regexp-braces
+    - include: escape
+
+  conditional:
+    - match: '(?={{end_chars}})'
+      pop: true
+    - match: '\b(elseif)\b\s+(\{)'
+      captures:
+        1: keyword.control.tcl
+        2: meta.block.tcl punctuation.section.block.begin.tcl
+      push: conditional-expr
+    - match: '\b(then|elseif|else)\b(?=\s)'
+      scope: keyword.control.tcl
+    - include: commands
+
+  conditional-expr:
+    - meta_content_scope: meta.block.tcl
+    - match: '(\})([^{{inline_end_chars}}]*)'
+      captures:
+        1: meta.block.tcl punctuation.section.block.end.tcl
+        2: invalid.illegal.tcl
+      pop: true
+    - match: '\\[\\{}n]'
+      scope: constant.character.escape.tcl
+    - include: operators
+    - include: commands
+
+  conditional-bare-expr:
+    - meta_content_scope: meta.block.tcl
+    - match: '(?=[\{{{inline_end_chars}}{{end_chars}}])'
+      pop: true
+    - match: '\\[\\{}n]'
+      scope: constant.character.escape.tcl
+    - include: operators
+    - include: commands
+
+  proc:
+    - match: \b(proc)\s+({{var_unquoted_string}})
+      scope: meta.function.tcl
+      captures:
+        1: keyword.other.tcl
+        2: entity.name.function.tcl
+      set: proc-parameters
+    - match: \bproc\b(?=\s)
+      scope: keyword.other.tcl
+      pop: true
+
+  proc-parameters:
+    - match: \s+
+      scope: meta.function.tcl
+    - match: \{
+      scope: punctuation.section.block.begin.tcl
+      set:
+        - meta_scope: meta.function.parameters.tcl meta.block.tcl
+        - match: '(\})([^{{inline_end_chars}}]*)'
+          captures:
+            1: punctuation.section.block.end.tcl
+            2: invalid.illegal.tcl
+          set: proc-body
+        - match: '^\s*(#)'
+          captures:
+            1: comment.line.number-sign.tcl punctuation.definition.comment.tcl
+          push:
+            - meta_content_scope: comment.line.number-sign.tcl
+            - match: \n
+              pop: true
+            - match: \\\\
+            - match: \\\n
+              scope: punctuation.separator.continuation.tcl
+        - include: proc-parameter
+    - match: '(\[)\s*(list)\b(?=\s)'
+      captures:
+        1: punctuation.definition.substitution.begin.tcl
+        2: keyword.other.tcl
+      set:
+        - meta_scope: meta.function.parameters.tcl meta.substitution.tcl
+        - match: \]
+          scope: punctuation.definition.substitution.end.tcl
+          set: proc-body
+        - include: proc-parameter
+    - match: ''
+      pop: true
+
+  proc-parameter:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tcl
+      push:
+        - meta_scope: meta.block.tcl
+        - match: '{{unquoted_string}}'
+          scope: variable.parameter.tcl
+          set:
+            - meta_content_scope: meta.block.tcl
+            - match: '(\})([^{{inline_end_chars}}]*)'
+              captures:
+                1: meta.block.tcl punctuation.section.block.end.tcl
+                2: invalid.illegal.tcl
+              pop: true
+            - include: commands
+    - match: '\[\s*(list)\b(?=\s)'
+      captures:
+        1: punctuation.definition.substitution.begin.tcl
+        2: keyword.other.tcl
+      push:
+        - meta_scope: meta.substitution.tcl
+        - match: '{{unquoted_string}}'
+          scope: variable.parameter.tcl
+          set:
+            - match: \]
+              scope: punctuation.definition.substitution.end.tcl
+              pop: true
+            - include: commands
+    - match: '{{unquoted_string}}'
+      scope: variable.parameter.tcl
+    - match: (?=\S)
+      pop: true
+
+  proc-body:
+    - meta_content_scope: meta.function.tcl
+    - match: '(?={{end_chars}})'
+      pop: true
+    - include: commands
+
+  expr:
+    - match: (?={{end_chars}})
+      pop: true
+    - include: expr-body
+
+  expr-body:
+    - match: '\{'
+      scope: punctuation.section.block.begin.tcl
+      push:
+        - meta_scope: meta.block.tcl
+        - match: '(\})([^{{inline_end_chars}}]*)'
+          captures:
+            1: punctuation.section.block.end.tcl
+            2: invalid.illegal.tcl
+          pop: true
+        - match: '\\[\\{}n]'
+          scope: constant.character.escape.tcl
+        - include: operators
+        - include: commands
+    - include: operators
+    - include: commands
+
+  operators:
+    - match: '[~!*/%<>&^|=?:+-]'
+      scope: keyword.operator.tcl
+    - match: '\b(eq|ne|in|ni)\b(?=\s)'
+      scope: keyword.operator.word.tcl
+
+  command-braces:
+    - meta_scope: meta.block.tcl
+    - match: \}
+      scope: punctuation.section.block.end.tcl
+      pop: true
+    - include: commands
+
+  non-command-braces:
+    - meta_scope: meta.block.tcl
+    - match: ^\s*(?=#)
+      push: comments
+    - include: braces
+    - match: '(\})([^{{inline_end_chars}}]*)'
+      captures:
+        1: punctuation.section.block.end.tcl
+        2: invalid.illegal.tcl
+      pop: true
+    - match: '\\[\\{}n]'
+      scope: constant.character.escape.tcl
+    - include: expressions
+
+  string-braces:
+    - meta_scope: string.quoted.brace.tcl
+    - match: '(\})(?=[\s\n{{inline_end_chars}}])'
+      captures:
+        1: punctuation.definition.string.end.tcl
+        2: invalid.illegal.tcl
+      pop: true
+    - match: '\n'
+      pop: true
+    - match: '\\[\\{}n]'
+      scope: constant.character.escape.tcl
+
+  braces:
+    - match: (\{)(\*)(\})
+      scope: meta.block.tcl
+      captures:
+        1: punctuation.section.block.begin.tcl
+        2: keyword.operator.tcl
+        3: punctuation.section.block.end.tcl
+    # Heuristic: if the brace is followed by whitespace,
+    # or what appears to be a command name followed by
+    # whitespace, treat it as code, otherwise a regexp
+    - match: '\{(?=\s*({{most_likely_code}})\b|\n)'
+      scope: punctuation.section.block.begin.tcl
+      push:
+        - meta_scope: meta.block.tcl
+        - match: \}
+          scope: punctuation.section.block.end.tcl
+          pop: true
+        - include: commands
+    - match: '\{(?=\s|\})'
+      scope: punctuation.section.block.begin.tcl
+      push: non-command-braces
+    - match: '\{'
+      scope: punctuation.definition.string.begin.tcl
+      push: string-braces
+
+  substitution:
+    - match: '\[(?!{{special_chars}})'
+      scope: punctuation.definition.substitution.begin.tcl
+      push: [substitution-body, command-name]
+
+  substitution-body:
+    - meta_scope: meta.substitution.tcl
+    - match: '\]'
+      scope: meta.substitution.tcl punctuation.definition.substitution.end.tcl
+      pop: true
+    - include: commands
+
+  escape:
+    - match: '\\(\d{1,3}|x\h+|u\h{1,4}|.|n)'
+      scope: constant.character.escape.tcl
+
+  variable:
+    - match: '(\$)((?:[a-zA-Z0-9_]|::)+(\([^\)]+\))?|\{[^\}]*\})'
+      scope: variable.other.tcl
+      captures:
+        1: punctuation.definition.variable.tcl
