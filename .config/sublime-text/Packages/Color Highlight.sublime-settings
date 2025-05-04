@@ -1,0 +1,20 @@
+/*
+    Color Highlight user settings in here override the default
+*/
+{
+    "user": {
+        "highlight": true,
+        "gutter_icon": "fill",
+        "highlight_values": true,
+        "named_values": true,
+        "hex_values": true,
+        "0x_hex_values": true,
+        "xterm_color_values": true,
+        "rgb_values": true,
+        "hsv_values": true,
+        "hsl_values": true,
+        "hwb_values": true,
+        "lab_values": true,
+        "lch_values": true,
+    }
+}
