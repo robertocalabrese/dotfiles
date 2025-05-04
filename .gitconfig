@@ -1,0 +1,50 @@
+# Author:  Roberto Calabrese a.k.a. Kicka
+# City:    Palermo, Sicily
+# Country: Italy
+
+[user]
+	name = Roberto Calabrese
+	email = 2610806+robertocalabrese@users.noreply.github.com
+[core]
+	editor = subl -n -w
+    pager = bat --paging=never
+    precomposeunicode = true
+[push]
+    autoSetupRemote = true
+[init]
+    defaultBranch = main
+[alias]
+    # git log
+    l    = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate
+    l-1h = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --since=1-hour-ago
+    l-1d = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --since=1-day-ago
+    l-1w = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --since=1-week-ago
+    l-1m = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --since=1-month-ago
+    l-1y = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --since=1-year-ago
+
+    # git log --reverse
+    lr    = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --reverse
+    lr-1h = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --reverse --since=1-hour-ago
+    lr-1d = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --reverse --since=1-day-ago
+    lr-1w = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --reverse --since=1-week-ago
+    lr-1m = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --reverse --since=1-month-ago
+    lr-1y = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --reverse --since=1-year-ago
+
+    # git log --oneline
+    lo    = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline
+    lo-1h = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --since=1-hour-ago
+    lo-1d = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --since=1-day-ago
+    lo-1w = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --since=1-week-ago
+    lo-1m = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --since=1-month-ago
+    lo-1y = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --since=1-year-ago
+
+    # git log --oneline --reverse
+    lor    = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --reverse
+    lor-1h = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --reverse --since=1-hour-ago
+    lor-1d = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --reverse --since=1-day-ago
+    lor-1w = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --reverse --since=1-week-ago
+    lor-1m = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --reverse --since=1-month-ago
+    lor-1y = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --oneline --reverse --since=1-year-ago
+
+    # git log --graph
+    lg = log --pretty=format:"%C(yellow)%h%C(red)%d\\ %Creset%s%C(blue)\\ [%cn]" --decorate --all --oneline --graph
