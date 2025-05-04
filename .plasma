@@ -1,0 +1,83 @@
+# Author:  Roberto Calabrese a.k.a. Kicka
+# City:    Palermo, Sicily
+# Country: Italy
+
+# Keys 						      Action
+-------------------------------------------------------------------------------
+Meta + Del                        Log out
+Ctrl + Alt + Del                  Reboot
+Meta + Ctrl + Alt + Del           Shutdown
+
+Meta + Q                          Close the 'focussed' window
+Meta + W                          Toggle overview
+Meta + =                          Zoom in
+Meta + -                          Zoom out
+Meta + 0                          Zoom to actual size
+
+Meta + ArrowDown                  -
+Alt  + Tab                        Walk trough 'windows'
+Meta + ArrowUp                    -
+Alt  + Shift + Tab                Walk trough 'windows' (Reverse)
+
+Meta + F                          Make the 'focussed' window 'fullscreen'
+Meta + PgUp                       Make the 'focussed' window 'maximized'
+Meta + PgDown                     Make the 'focussed' window 'minimized'
+
+Meta + ArrowLeft                  Quick tile the 'focussed' window to the left
+Meta + ArrowRight                 Quick tile the 'focussed' window to the right
+
+Meta + 1                          Switch to 'Desktop 1'
+Meta + 2                          Switch to 'Desktop 2'
+Meta + 3                          Switch to 'Desktop 3'
+Meta + 4                          Switch to 'Desktop 4'
+Meta + 5                          Switch to 'Desktop 5'
+Meta + 6                          Switch to 'Desktop 6'
+Meta + 7                          Switch to 'Desktop 7'
+Meta + 8                          Switch to 'Desktop 8'
+Meta + 9                          Switch to 'Desktop 9'
+Meta + 0                          Switch to 'Desktop 10'
+Meta + Ctrl + ArrowLeft           Switch one desktop to the 'left'
+Meta + Ctrl + ArrowRight          Switch one desktop to the 'right'
+
+Meta + Alt + 1                    Put the 'focussed' window to 'Desktop 1'
+Meta + Alt + 2                    Put the 'focussed' window to 'Desktop 2'
+Meta + Alt + 3                    Put the 'focussed' window to 'Desktop 3'
+Meta + Alt + 4                    Put the 'focussed' window to 'Desktop 4'
+Meta + Alt + 5                    Put the 'focussed' window to 'Desktop 5'
+Meta + Alt + 6                    Put the 'focussed' window to 'Desktop 6'
+Meta + Alt + 7                    Put the 'focussed' window to 'Desktop 7'
+Meta + Alt + 8                    Put the 'focussed' window to 'Desktop 8'
+Meta + Alt + 9                    Put the 'focussed' window to 'Desktop 9'
+Meta + Alt + 0                    Put the 'focussed' window to 'Desktop 10'
+
+Meta + Alt + Return               Open 'Alacritty'
+Meta + Alt + Space                Open 'Krunner'
+Meta + Alt + A                    Open 'Amarok'
+Meta + Alt + C                    Open 'Calculator'
+Meta + Alt + D                    Open 'Dolphin'
+Meta + Alt + F                    Open 'Firefox'
+Meta + Alt + G                    Open 'Gimp'
+Meta + Alt + I                    Open 'Inkscape'
+Meta + Alt + K                    Open 'KDE Settings'
+Meta + Alt + L                    Open 'Libreoffice'
+Meta + Alt + M                    Open 'Weather Forecast'
+Meta + Alt + O                    Open 'OBS Studio'
+Meta + Alt + Q                    Open 'Qbittorrent'
+Meta + Alt + S                    Open 'Sublime Text'
+Meta + Alt + T                    Open 'Tor Browser'
+Meta + Alt + V                    Open 'Vivaldi'
+
+Meta + D                          Open 'DaVinci Resolve'
+Meta + M                          Open 'MusicBrainz Picard'
+
+Meta + Alt + Ctrl + D             Open 'Discord'
+Meta + Alt + Ctrl + M             Open 'KDE menu'
+Meta + Alt + Ctrl + Return        Open 'Konsole'
+
+Print                             Open 'hp-print'
+
+Scroll_lock                       Open 'Spectacle'
+Alt  + Scroll_lock                Open 'Spectacle'
+Meta + Scroll_lock                Open 'Spectacle'
+Meta + Alt + Scroll_lock          Open 'Spectacle'
+Meta + Alt + Ctrl + Scroll_lock   Open 'Spectacle'
