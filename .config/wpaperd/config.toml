@@ -1,0 +1,15 @@
+# Author:  Roberto Calabrese a.k.a. Kicka
+# City:    Palermo, Sicily
+# Country: Italy
+
+[default]
+duration = "15m"
+mode = "center"
+sorting = "ascending"
+exec = "~/.config/wpaperd/wallpaper.sh"
+
+# Effect
+[default.transition.fade]
+
+[any]
+path = "/mnt/Storage/Pictures/Wallpapers/"
