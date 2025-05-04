@@ -1,0 +1,302 @@
+# Author:  Roberto Calabrese a.k.a. Kicka
+# City:    Palermo, Sicily
+# Country: Italy
+
+#################
+##             ##
+##     ADD     ##
+##             ##
+#################
+
+alias a='git add' # add a specific file/s to the staging area.
+alias aa='git add --all' # add all files to the staging area.
+alias ap='git add --patch' # add by patch - looks at each change, and asks if we want to put it in the repo.
+alias au='git add --update' # add only the files that were updated, to the staging area.
+
+####################
+##                ##
+##     BRANCH     ##
+##                ##
+####################
+
+alias b='git branch' # list the registered branches.
+alias bd='git branch -D' # delete branch (--force).
+alias bed='git branch --edit-description' # branch with edit description
+alias brv='git branch -rv' # list all branches registered or not.
+alias bm='git branch -M' # rename branch (--force).
+alias bsd='git bsd' # branch with show description.
+
+######################
+##                  ##
+##     CAT_FILE     ##
+##                  ##
+######################
+
+alias cf='git cat-file -p' # retrieve an object-hash.
+alias ct='git cat-file -t' # retrieve the type (blob, commit, tree, tag) of an object-hash.
+
+####################
+##                ##
+##     COMMIT     ##
+##                ##
+####################
+
+alias c='git commit' # create an annotated commit (more than one line).
+alias ca='git commit -a' # add all files to the staging area and create an annotated commit (more than one line).
+alias cam='git commit -am' # add all files to the staging area and create a lightweight commit (one line).
+alias cm='git commit -m' # create a lightweight commit (one line).
+alias ci='git commit -i' # commit interactive.
+
+###################
+##               ##
+##     AMEND     ##
+##               ##
+###################
+
+alias am='git commit --amend' # amend the tip of the current branch rather than creating a new commit.
+alias amm='git commit --amend --message' # amend the tip of the current branch, and edit the message.
+alias amne='git commit --amend --no-edit' # amend the tip of the current branch, and do not edit the message.
+
+######################
+##                  ##
+##     CHECKOUT     ##
+##                  ##
+######################
+
+alias co='git checkout'
+
+###################
+##               ##
+##     CLONE     ##
+##               ##
+###################
+
+alias cl='git clone' # clone a repository.
+alias clr='git clone --recursive' # clone a repository using ur recommended way i.e. recursive include of submodules.
+
+##################
+##              ##
+##     DIFF     ##
+##              ##
+##################
+
+alias d='git diff' # show all the changes.
+alias dc='git diff --cached' # show all the changes not yet staged.
+alias ds='git diff --staged'  # show all the changes about to be commited.
+alias dw='git diff --word-diff' # show all the changes but by word, not line.
+
+###################
+##               ##
+##     FETCH     ##
+##               ##
+###################
+
+alias f='git fetch' # fetch a branch from a repository from the web.
+alias fa='git fetch --all' # fetch every branches from a repository from the web.
+
+#########################
+##                     ##
+##     HASH-OBJECT     ##
+##                     ##
+#########################
+
+alias ho='git hash-object' # create an object-hash.
+alias how='git hash-object -w' # save an object-hash inside git.
+alias hos='git hash-object --stdin' # create an object-hash from a string passed in the 'stdin' channel.
+alias hosw='git hash-object --stdin -w' # save an object-hash from a string passed in the 'stdin' channel.
+
+##################
+##              ##
+##     INIT     ##
+##              ##
+##################
+
+alias i='git init' # initialize a folder with git.
+alias ie='git init-empty' # inizialize a folder with git, with the first commit empty to help rebasing.
+
+#################
+##             ##
+##     LOG     ##
+##             ##
+#################
+
+alias l='git l' # show all the logs.
+alias l-1h='git l-1h' # show all the logs in the last hour.
+alias l-1d='git l-1d' # show all the logs in the last day.
+alias l-1w='git l-1w' # show all the logs in the last week.
+alias l-1m='git l-1m' # show all the logs in the last month.
+alias l-1y='git l-1y' # show all the logs in the last year.
+
+alias lo='git lo' # show all the logs with '--oneline'.
+alias lo-1h='git lo-1h' # show all the logs in the last hour with '--oneline'.
+alias lo-1d='git lo-1d' # show all the logs in the last day with '--oneline'.
+alias lo-1w='git lo-1w' # show all the logs in the last week with '--oneline'.
+alias lo-1m='git lo-1m' # show all the logs in the last month with '--oneline'.
+alias lo-1y='git lo-1y' # show all the logs in the last year with '--oneline'.
+
+alias lor='git lor' # show all the logs with '--oneline', but in reverse order.
+alias lor-1h='git lor-1h' # show all the logs in the last hour with '--oneline', but in reverse order.
+alias lor-1d='git lor-1d' # show all the logs in the last day with '--oneline', but in reverse order.
+alias lor-1w='git lor-1w' # show all the logs in the last week with '--oneline', but in reverse order.
+alias lor-1m='git lor-1m' # show all the logs in the last month with '--oneline', but in reverse order.
+alias lor-1y='git lor-1y' # show all the logs in the last year with '--oneline', but in reverse order.
+
+alias lr='git lr' # show all the logs, but in reverse order.
+alias lr-1h='git lr-1h' # show all the logs in the last hour, but in reverse order.
+alias lr-1d='git lr-1d' # show all the logs in the last day, but in reverse order.
+alias lr-1w='git lr-1w' # show all the logs in the last week, but in reverse order.
+alias lr-1m='git lr-1m' # show all the logs in the last month, but in reverse order.
+alias lr-1y='git lr-1y' # show all the logs in the last year, but in reverse order.
+
+alias lgr='git lg' # show all the logs with '--graph' (--oneline).
+
+###################
+##               ##
+##     MERGE     ##
+##               ##
+###################
+
+alias m='git merge' # merge the branch specified in the current branch.
+
+##################
+##              ##
+##     PULL     ##
+##              ##
+##################
+
+alias pull='git pull'
+
+##################
+##              ##
+##     PUSH     ##
+##              ##
+##################
+
+alias push='git push'
+
+####################
+##                ##
+##     REBASE     ##
+##                ##
+####################
+
+alias rb='git rebase'
+alias rbi='git rebase -i' # iteractive rebase
+
+alias rba='git rebase --abort' # after a rebase (iteractive or not).
+alias rbc='git rebase --continue' # after a rebase (iteractive or not).
+alias rbs='git rebase --skip' # after a rebase (iteractive or not).
+
+####################
+##                ##
+##     REFLOG     ##
+##                ##
+####################
+
+alias rf='git reflog'
+alias rfl='git reflog show' # show the reflog list.
+
+####################
+##                ##
+##     REMOTE     ##
+##                ##
+####################
+
+alias rr='git remote'
+alias rra='git remote add' # add the url of a web repository.
+alias rrl='git remote -v' # tell git where a repository is located in the web.
+alias rrrn='git remote rename' # rename a web repository location.
+alias rrrm='git remote remove' # remove a web repository location.
+
+################
+##            ##
+##     RM     ##
+##            ##
+################
+
+alias rms='git rm --cached' # remove a previous cached file from the staging area.
+
+###################
+##               ##
+##     RESET     ##
+##               ##
+###################
+
+alias re='git reset' # go back in time to the specified commit. All commits after the one specified are not lost.
+alias reh='git reset --hard' # go back in time to the specified commit. All commits after the one specified are lost.
+
+#####################
+##                 ##
+##     RESTORE     ##
+##                 ##
+#####################
+
+alias rs='git restore'
+alias rsss='git restore --source' # restore a file as it was in the reference provided.
+alias rsst='git restore --staged' # remove a file that was mistakely staged.
+
+####################
+##                ##
+##     REVERT     ##
+##                ##
+####################
+
+alias rv='git revert' # like 'git reset', but instead of go back in time, it creates a new commit that contains the back in time data.
+
+##################
+##              ##
+##     SHOW     ##
+##              ##
+##################
+
+alias show='git show'
+
+######################
+##                  ##
+##     SNAPSHOT     ##
+##                  ##
+######################
+
+alias snapshot='git snapshot'
+
+####################
+##                ##
+##     STATUS     ##
+##                ##
+####################
+
+alias s='git status' # status in full details
+alias ss='git status --short' # status with short format instead of full details
+
+###################
+##               ##
+##     STASH     ##
+##               ##
+###################
+
+alias st='git stash' # save all uncommitted changes in a stash entry.
+alias sta='git stash apply' # apply a stash entry (the stash entry will not be removed from the stash list).
+alias stl='git stash list' # show the stast list
+alias stp='git stash pop' # apply the latest stash entry (the stash entry will be removed from the stash list).
+
+####################
+##                ##
+##     SWITCH     ##
+##                ##
+####################
+
+alias sw='git switch' # switch to a branch.
+alias swc='git switch -c' # create a branch and switch to it.
+
+#################
+##             ##
+##     TAG     ##
+##             ##
+#################
+
+alias tt='git tag' # create a lightweight tag (one line).
+alias tta='git tag -a' # create an annotated tag (more than one line).
+alias ttl='git tag -l' # list all tags.
+alias ttr='git tag -d' # remove a tag.
+alias ttrn='git tag -f' # rename a tag.
+alias ttp='git push --tags' # push a tag.
