@@ -1,0 +1,187 @@
+#######################################
+##                                   ##
+##     Other effects for wpaperd     ##
+##                                   ##
+#######################################
+
+# NOT WORKING:
+#
+#   book-flip
+#   dreamy
+
+#[default.transition.overexposure]
+
+#[default.transition.simple-zoom]
+#   zoom-quickness = 0.8
+
+#[default.transition.left-right]
+
+#[default.transition.circle-open]
+#   smoothness = 0.3
+#   opening = true
+
+#[default.transition.circle-crop]
+#   bgcolor = [0.0, 0.0, 0.0, 1.0]
+
+#[default.transition.directional]
+#   from right to left:
+#   direction = [1.0, 0.0]
+
+#   from bottom to top:
+#   direction = [0.0, 1.0]
+
+#[default.transition.directional-scaled]
+#   scale = 0.7
+
+#   from right to left
+#   direction = [1.0, 0.0]
+
+#   from bottom to top:
+#   direction = [0.0, 1.0]
+
+#[default.transition.directional-wipe]
+#   smoothness = 0.5
+
+#   from right to left
+#    direction = [1.0, 0.0]
+
+#   from bottom to top:
+#   direction = [0.0, 1.0]
+
+#[default.transition.dreamy-zoom]
+#   rotation = 6.0
+#   scale = 1.2
+
+#[default.transition.horizontal-open]
+
+#[default.transition.radial]
+#   smoothness = 1.0
+
+#[default.transition.rotate-scale-vanish]
+#   fade-in-second = true
+#   reverse-effect = false
+#   reverse-rotation = false
+
+#[default.transition.cross-warp]
+
+#[default.transition.bounce]
+#   shadow-colour = [0.0, 0.0, 0.0, 0.6]
+#   shadow-height = 0.075
+#   bounce = 3
+
+#[default.transition.bow-tie-horizontal]
+
+#[default.transition.bow-tie-vertical]
+
+#[default.transition.butterfly-wave-scrawler]
+#   amplitude = 1.0
+#   waves = 30.0
+#   color-separation = 0.3
+
+#[default.transition.circle]
+
+#[default.transition.colour-distance]
+#   power = 5.0
+
+#[default.transition.cross-zoom]
+#   strength = 0.4
+
+#[default.transition.dissolve]
+#   line-width = 0.1
+#   spread-clr = [1.0, 0.0, 0.0]
+#   hot-clr = [0.9, 0.9, 0.2]
+#   intensity = 1.0
+#   pow = 5.0
+
+#[default.transition.doom]
+#   bars = 30
+#   amplitude = 2.0
+#   noise = 0.1
+#   frequency = 0.5
+#   drip-scale = 0.5
+
+#[default.transition.doorway]
+#   reflection = 0.4
+#   perspective = 0.4
+#   depth = 3.0
+
+#[default.transition.edge]
+#   thickness = 0.001
+#   brightness = 8.0
+
+#[default.transition.film-burn]
+#   seed = 2.31
+
+#[default.transition.glitch-displace]
+
+#[default.transition.glitch-memories]
+
+#[default.transition.grid-flip]
+#   size = [4, 4]
+#   pause = 0.1
+#   divider-width = 0.05
+#   bgcolor = [0.0, 0.0, 0.0, 1.0]
+#   randomness = 0.1
+
+#[default.transition.hexagonalize]
+#   steps = 50
+#   horizontal-hexagons = 20.0
+
+#[default.transition.horizontal-close]
+
+#[default.transition.inverted-page-curl]
+
+#[default.transition.linear-blur]
+#   intensity = 0.1
+
+#[default.transition.mosaic]
+#   endx = 2
+#   endy = -1
+
+#[default.transition.pixelize]
+#   squares-min = [20, 20]
+#   steps = 50
+
+#[default.transition.polka-dots-curtain]
+#   dots = 20.0
+#   center = [0.0, 0.0]
+
+#[default.transition.rectangle]
+#   bgcolor = [0.0, 0.0, 0.0, 1.0]
+
+#[default.transition.ripple]
+#   amplitude = 100.0
+#   speed = 50.0
+
+#[default.transition.rolls]
+#   rolls-type = 0
+#   rot-down = false
+
+#[default.transition.rotate-scale-fade]
+#   center = [0.0, 0.5]
+#   rotations = 1.0
+#   scale = 8.0
+#   back-color = [0.15, 0.15, 0.15, 1.0]
+
+#[default.transition.slides]
+#   slides-type = 0
+#   slides-in = false
+
+#[default.transition.static-fade]
+#   n-noise-pixels = 200.0
+#   static-luminisotiy = 0.8
+
+#[default.transition.stereo-viewer]
+#   zoom = 0.88
+#   corner_radius = 0.22
+
+#[default.transition.swirl]
+
+#[default.transition.tv-static]
+#   offset = 0.05
+
+#[default.transition.water-drop]
+#   amplitude = 30.0
+#   speed = 30.0
+
+#[default.transition.window-blinds]
