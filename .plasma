@@ -67,6 +67,7 @@ Meta + Alt + S                    Open 'Sublime Text'
 Meta + Alt + T                    Open 'Tor Browser'
 Meta + Alt + V                    Open 'Vivaldi'
 
+Meta + A                          Open 'Audacity'
 Meta + D                          Open 'DaVinci Resolve'
 Meta + M                          Open 'MusicBrainz Picard'
 

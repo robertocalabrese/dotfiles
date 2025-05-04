@@ -84,6 +84,7 @@ Menu                         Open 'Application List'
 Print                        Open 'hp-print'
 Scroll_lock                  Open 'hyprshot-gui'
 
+Meta + A                     Open 'Audacity'
 Meta + D                     Open 'DaVinci Resolve'
 Meta + M                     Open 'MusicBrainz Picard'
 
