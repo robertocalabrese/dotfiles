@@ -1,0 +1,26 @@
+# Author:  Roberto Calabrese a.k.a. Kicka
+# City:    Palermo, Sicily
+# Country: Italy
+
+allow_images=true
+allow_markup=true
+always_parse_args=false
+display_generic=false
+gtk_dark=true
+height=500
+hide_scroll=false
+image_size=32
+insensitive=true
+key_expand=Tab
+layer=overlay
+line_wrap=word
+no_actions=true
+normal_window=true
+orientation=vertical
+print_command=true
+prompt=Select a program:
+show_all=true
+sort_order=alphabetical
+show=dmenu
+term=alacritty
+width=350
