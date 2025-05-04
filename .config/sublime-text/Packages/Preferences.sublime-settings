@@ -1,0 +1,239 @@
+{
+    // Always visualise the viewport on the minimap, as opposed to only
+    // showing it on mouse over
+    "always_show_minimap_viewport": true,
+
+    // Enable auto complete to be triggered automatically when typing.
+    "auto_complete": false,
+
+    // Calculates indentation automatically when pressing enter
+    "auto_indent": true,
+
+    // Controls auto pairing of quotes, brackets etc
+    "auto_match_enabled": true,
+
+    // Show folders in the sidebar in bold
+    "bold_folder_labels": true,
+
+    // Valid values are "smooth", "phase", "blink" and "solid". Previous
+    // versions of Sublime Text used "smooth" by default.
+    "caret_style": "solid",
+
+    // These settings control the size of the caret
+    "caret_extra_top": 4,
+    "caret_extra_bottom": 4,
+    "caret_extra_width": 1,
+
+    // This determines whether the find panel is closed when the "Find All"
+    // or "Replace All" buttons are pressed. Note this does not change the
+    // keybinding behavior.
+    "close_find_after_find_all": false,
+    "close_find_after_replace_all": false,
+
+    // Sets the colors used within the text area.
+    // The value "auto" will switch between the "light_color_scheme" and
+    // "dark_color_scheme" based on the operating system appearance.
+    "color_scheme": "Packages/User/Mustang.tmTheme",
+
+    // When drag_text is enabled, clicking on selected text will begin a
+    // drag-drop operation.
+    "drag_text": false,
+
+    // Note that the font_face and font_size are overridden in the platform
+    // specific settings file, for example, "Preferences (Linux).sublime-settings".
+    // Because of this, setting them here will have no effect: you must set them
+    // in your User File Preferences.
+    "font_face": "Ubuntu Mono",
+    "font_size": 13,
+
+    // Valid options on all platforms are:
+    //  - "no_bold": Disables bold text
+    //  - "no_italic": Disables italic text
+    // Antialiasing options:
+    //  - "no_antialias": Disables antialiasing
+    //  - "gray_antialias": Uses grayscale antialiasing instead of subpixel
+    // Ligature options:
+    //  - "no_liga": Disables standard ligatures (OpenType liga feature)
+    //  - "no_clig": Disables contextual ligatures (OpenType clig feature)
+    //  - "no_calt": Disables contextual alternatives (OpenType calt feature)
+    //  - "dlig": Enables discretionary ligatures (OpenType dlig feature)
+    //  - "ss01": Enables OpenType stylistic set 1. Can enable sets 1 to 10
+    //        by changing the last two digits.
+    // Windows-only options:
+    //  - "directwrite": (default) Use DirectWrite for font rendering
+    //  - "gdi": Use GDI for font rendering
+    //  - "dwrite_cleartype_classic": Only applicable to "directwrite" mode,
+    //        should render fonts similar to traditional GDI
+    //  - "dwrite_cleartype_natural": Only applicable to "directwrite" mode,
+    //        should render fonts similar to ClearType "natural quality" GDI
+    //  - "subpixel_antialias": Force ClearType antialiasing when disabled
+    //        at system level
+    // Mac-only options:
+    //  - "no_round": Don't round glyph widths for monospace fonts when
+    //        "font_size" is small.
+    "font_options": ["gray_antialias"],
+
+    // "gtk_client_side_window_decorations": false,
+
+    // Enables hardware accelerated rendering. This moves rendering to your GPU,
+    // allowing for faster rendering at higher resolutions. Changing this
+    // setting requires an application restart to take effect.
+    // - "none": Performs CPU rendering.
+    // - "opengl": Uses OpenGL for rendering. Minimum required version is 4.1
+    //
+    // On Mac, this value is overridden in the platform specific settings.
+    "hardware_acceleration": "opengl",
+
+    // Whether to highlight find results in the scrollbar
+    "highlight_find_results_in_scrollbar": false,
+
+    // If enabled, will highlight any line with a caret
+    "highlight_line": true,
+
+    // Controls how the indent guides are drawn. Options may be combined, with
+    // valid options being:
+    //  - "draw_normal" - will draw plain indent guides for every indentation
+    //    group
+    //  - "draw_active" - will draw indent guides for the group
+    //    containing the caret in a different color
+    //  - "draw_active_single" - will draw the right-most indent guide in the
+    //    group containing the caret in a different color
+    //  - "solid" - can be combined with any of the draw_* options to draw
+    //    solid instead of stippled lines
+    "indent_guide_options": ["draw_normal", "draw_active"],
+
+    // Spacing between the gutter and the text
+    "margin": 4,
+
+    // Valid values are "system", "enabled" and "disabled"
+    "overlay_scroll_bars": "disabled",
+
+    // remember_workspace makes Sublime Text remember what workspace each window
+    // was in last. When set to false the OS left to determine which workspace
+    // a window is opened in. This doesn't work with Wayland.
+    "remember_workspace": false,
+
+    // Columns in which to display vertical rulers. You can also pair the column
+    // with a ruler style (See "ruler_style"), eg: [[80, "solid"]]
+    "rulers": 80,
+
+    // Controls how ruler lines are drawn
+    // - "dotted": Drawn as a dotted line
+    // - "stippled": Drawn as a stippled line
+    // - "solid": Drawn as a solid line
+    "ruler_style": "dotted",
+
+    // Set to false to disable scrolling past the end of the buffer.
+    // On Mac, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+    //
+    // This setting may also be set to a number between 0.0 and 1.0 to specify
+    // how much scrolling past the end of the buffer should be allowed. 0.5
+    // scrolls halfway and 0.0 is the same as false.
+    "scroll_past_end": false,
+
+    // Set to 0 to disable smooth scrolling. Set to a value between 0 and 1 to
+    // scroll slower, or set to larger than 1 to scroll faster
+    "scroll_speed": 1.0,
+
+    // When enabled, hovering over a word will show a popup listing all
+    // possible locations for the definition symbol. Requires index_files.
+    "show_definitions": false,
+
+    // Makes auto indent a little smarter, e.g., by indenting the next line
+    // after an if statement in C. Requires auto_indent to be enabled.
+    "smart_indent": true,
+
+    // When enabled, pressing tab will insert the best matching completion.
+    // When disabled, tab will only trigger snippets or insert a tab.
+    // Shift+tab can be used to insert an explicit tab when tab_completion is
+    // enabled.
+    "tab_completion": false,
+
+    // The number of spaces a tab is considered equal to
+    "tab_size": 4,
+
+    // The theme controls the look of Sublime Text's UI (buttons, tabs, scroll
+    // bars, etc)
+    // The value "auto" will switch between the "light_theme" and "dark_theme"
+    // based on the operating system appearance.
+    "theme": "Material-Nil.sublime-theme",
+
+    // Set to true to insert spaces when tab is pressed
+    "translate_tabs_to_spaces": true,
+
+    // Trims white space added by auto_indent when moving the caret off the
+    // line.
+    "trim_automatic_white_space": true,
+
+    // Controls where trailing white space is removed on save.
+    // - "none": Do not remove any trailing white space on save.
+    // - "all": Remove all trailing white space on save.
+    // - "not_on_caret": Only remove white space that won't affect the caret.
+    //                   When used in conjunction with "save_on_focus_lost" and
+    //                   certain desktop environments that frequently make the
+    //                   application lose focus this avoids the caret jumping
+    //                   around a lot.
+    "trim_trailing_white_space_on_save": "all",
+
+    // Only trim white space on save for the parts of a file that have been
+    // modified by you. If there is trailing white space in other parts of the
+    // file they are left alone.
+    "trim_only_modified_white_space": false,
+
+    // Magnifies the entire user interface. Sublime Text must be restarted for
+    // this to take effect. 1.0 is normal scale, 0.0 allows for auto-detection
+    // based on text scale with older Linux configurations that don't fully
+    // support GTK display scaling.
+    "ui_scale": 1.5,
+
+    // Disables the search for updates.
+    "update_check": false,
+
+    // If translate_tabs_to_spaces is true, use_tab_stops will make tab and
+    // backspace and delete insert/delete up to the next tabstop
+    "use_tab_stops": true,
+
+    // Disables horizontal scrolling if enabled.
+    // May be set to true, false, or "auto", where it will be disabled for
+    // source code, and otherwise enabled.
+    "word_wrap": false,
+
+    /*
+     'Material Nil' theme options:
+    */
+
+    // If true, will tint either folder icons or disclosure triangles
+    // in the sidebar (only the sidebar) purple.
+    "material_nil_colored_folder_glyphs": true,
+
+    // If true, will display an orange bar under tabs with modified buffers.
+    "material_nil_highlight_modified_tabs": true,
+
+    // If true, will display a folder icon beside folders in the sidebar
+    // instead of a disclosure triangle. Sidebar folders are off by default.
+    "material_nil_sidebar_folders": true,
+
+    // If true, will disable the colored group labels.
+    // Group labels are the things that say "Group 1" and 2 and so on in the sidebar.
+    // They're only visible if you have open files shown.
+    // Colored group labels are enabled by default.
+    "material_nil_disable_colored_group_labels": false,
+
+    // If true, will disable the colored folder labels in the sidebar.
+    // This is independent of group label coloring.
+    // Colored folder labels are enabled by default.
+    "material_nil_disable_colored_folder_labels": false,
+
+    // If true, will disable the fileicons labels in the sidebar.
+    // This is independent of group label coloring.
+    // Fileicons labels are enabled by default.
+    "material_nil_disable_fileicons": false,
+    "ignored_packages":
+    [
+		"Vintage",
+    ],
+    "index_files": false,
+    "dark_theme": "Default.sublime-theme",
+    "light_theme": "Adaptive.sublime-theme",
+}
