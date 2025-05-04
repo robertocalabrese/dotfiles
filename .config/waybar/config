@@ -1,0 +1,269 @@
+{
+	// Author:  Roberto Calabrese a.k.a. Kicka
+	// City:    Palermo, Sicily
+	// Country: Italy
+
+	// ####################
+	// ##                ##
+	// ##     GLOBAL     ##
+	// ##                ##
+	// ####################
+
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"custom/menu",
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+
+	"modules-center": [
+		"clock"
+	],
+
+	"modules-right": [
+		"mpris",
+		"custom/packages",
+		"tray",
+		"custom/wallpaper",
+		"custom/picker",
+		"idle_inhibitor",
+		"battery",
+		"temperature",
+		"cpu",
+		"memory",
+		"pulseaudio",
+		"pulseaudio#microphone",
+		"custom/exit"
+	],
+
+	// #######################
+	// ##                   ##
+	// ##     LEFT SIDE     ##
+	// ##                   ##
+	// #######################
+
+	"custom/menu": {
+		"format": "",
+		"on-click": "wofi --show drun",
+		"on-click-right": "wofi --show drun",
+		"tooltip": false
+	},
+
+	"hyprland/workspaces" : {
+		"active-only": false,
+		"all-outputs": true,
+		"format": "{}",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+		},
+		"persistent-workspaces": {
+			 "*": 1
+		},
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"tooltip": false
+	},
+
+	"hyprland/window": {
+		"max-length": 70,
+		"separate-outputs": true,
+		"rewrite": {
+			"(.*) (.*) (.*) Amarok": "  $1",
+			"(.*) (.*) Dolphin": "󰉋  $1",
+			"(.*) (.*) Gimp": "  $1",
+			"(.*) (.*) Print": "󰐪  $1",
+			"(.*) (.*) Inkscape": "  $1",
+			"(.*) (.*):(.*) Konsole": "  $1",
+			"(.*) (.*) Libreoffice (.*)": "  $1",
+			"(.*) (.*) Mozilla Firefox": "  $1",
+			"(.*) (.*) Okular": "  $1",
+			"qBittorrent (.*)": "󱑤  qBittorrent",
+			"(.*) (.*) System Settings": "  $1",
+			"(.*) (.*) (.*) Sublime Text": "  $1",
+			"(.*) (.*) Tor Browser": "  $1",
+			"(.*) (.*) Vivaldi": "  $1"
+		},
+		"tooltip": true
+	},
+
+	// ####################
+	// ##                ##
+	// ##     CENTER     ##
+	// ##                ##
+	// ####################
+
+	"clock": {
+		"timezone": "Europe/Rome",
+		"interval": 60,
+		"format": "{:L%A %d %B %Y   -   %H:%M}",
+		"locale": "it_IT.UTF-8",
+		"max-length": 40,
+		"tooltip": false
+	},
+
+	// ########################
+	// ##                    ##
+	// ##     RIGHT SIDE     ##
+	// ##                    ##
+	// ########################
+
+	"mpris": {
+		"interval": 0,
+		"format-playing": "{status_icon} ",
+		"format-paused":  "{status_icon}",
+		"format-stopped": "",
+		"player": "amarok",
+		"on-click": "playerctl previous",
+		"on-click-middle": "playerctl play-pause",
+		"on-click-right": "playerctl next",
+		"scroll-step": 5.0,
+		"on-scroll-up": "pamixer -d 5",
+		"on-scroll-down": "pamixer -i 5",
+		"smooth-scrolling-threshold": 1,
+		"status-icons": {
+			"paused":  "",
+			"playing": "",
+			"stopped": ""
+		},
+		"dynamic-order": ["artist", "title", "album", "length"],
+		"dynamic-importance-order": ["artist", "title"],
+		"dynamic-len": 20,
+		"ignored-players": ["firefox", "chromium", "mpv", "smplayer", "vlc"],
+		"max-length": 20,
+		"tooltip": true,
+		"tooltip-format-playing": "{artist}    \"{title}\" [{length}]",
+		"tooltip-format-paused":  "{artist}    \"{title}\" [{position}/{length}]",
+		"tooltip-format-stopped": "{artist}    \"{title}\""
+	},
+
+	"custom/packages": {
+		"exec": "checkupdates | wc -l",
+		"exec-if": "$HOME/.config/waybar/scripts/check_for_upgrades.sh 0",
+		"format": "󰫚 {}",
+		"interval": 60,
+		"tooltip": false
+	},
+
+	"tray": {
+		"icon-size": 24,
+		"spacing": 20
+	},
+
+	"custom/wallpaper": {
+		"format": "󰢵",
+		"on-click": "wpaperctl previous",
+		"on-click-middle": "wpaperctl toggle-pause",
+		"on-click-right": "wpaperctl next",
+		"tooltip": true,
+		"tooltip-format": "Left Click: 		Previous Wallpaper\nRight Click: 		Next Wallpaper\nMiddle Click:		Toggle Cycling"
+	},
+
+	"custom/picker": {
+		"format": "",
+		"on-click": "hyprpicker -a -f hex -z",
+		"on-click-right": "hyprpicker -a -f rgb -z",
+		"tooltip": true,
+		"tooltip-format": "Left Click: 	Pick HEX\nRight Click: 	Pick RGB"
+	},
+
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"tooltip": false
+	},
+
+	"battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged":  "󱘖 {capacity}%",
+        "format-icons":    ["", "", "", "", ""],
+        // "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": false
+    },
+
+	"temperature": {
+		"thermal-zone": 3,
+		"interval": 3,
+		"hwmon-path": "/dev/nct6678/temp1_input",
+		"critical-threshold": 97,
+		"format": "{icon} {temperatureC} °C",
+		"format-critical": "  {temperatureC} °C",
+		"format-icons": [""],
+		"max-length": 7,
+		"min-length": 7,
+		"on-click": "alacritty -e '.config/waybar/scripts/sensors.sh'",
+		"tooltip": false
+	},
+
+	"cpu": {
+		"interval": 5,
+		"format": " {usage:1} %",
+		"on-click": "alacritty -e 'htop'",
+		"tooltip": false
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": " {} %",
+		"on-click": "alacritty -e 'htop'",
+		"tooltip": false
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume} %",
+		"format-bluetooth": "{volume} % {icon}  {format_source}",
+		"format-bluetooth-muted": " {icon}  {format_source}",
+		"format-muted": " {volume} %",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"default": ["", "", "󰕾", ""],
+		"ignored-sinks": ["Easy Effects Sink"],
+		"scroll-step": 5.0,
+		"on-click": "pavucontrol -t 3",
+		"on-click-right": "~/.config/hypr/scripts/toggle_audio.sh",
+		"on-scroll-up": "pamixer -d 5",
+		"on-scroll-down": "pamixer -i 5",
+		"tooltip": false,
+		"smooth-scrolling-threshold": 1
+	},
+
+	"pulseaudio#microphone": {
+		"format": "{format_source}",
+		"format-source": " {volume} %",
+		"format-source-muted": " {volume} %",
+		"on-click-right": "~/.config/hypr/scripts/toggle_mic.sh",
+		"on-click": "pavucontrol -t 4",
+		"on-scroll-up": "pamixer --default-source -d 5",
+		"on-scroll-down": "pamixer --default-source -i 5",
+		"scroll-step": 5.0,
+		"tooltip": false,
+		"smooth-scrolling-threshold": 1
+	},
+
+	"custom/exit": {
+		"format": "{} ⏻",
+		"on-click": "wlogout -b 2",
+		"on-click-right": "hyprlock",
+		"tooltip": true,
+		"tooltip-format": "Left Click: 	Power Menu\nRight Click: 	Lock Screen"
+	}
+}
