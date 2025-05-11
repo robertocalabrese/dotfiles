@@ -5,7 +5,7 @@
 # Keys 						 Action
 -------------------------------------------------------------------------------------------------
 Meta + L                     Lock the screen
-Meta + Del                   Power menu
+Meta + Del                   Log out
 Ctrl + Alt + Del             Reboot
 Meta + Ctrl + Alt + Del      Shutdown
 Meta + Ctrl + Alt + S        Suspend
