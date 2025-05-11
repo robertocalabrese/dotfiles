@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "robertocalabrese75@gmail.com",
+                "Name": "Roberto Calabrese a.k.a. Kicka"
+            }
+        ],
+        "Category": "Plasma Look And Feel",
+        "Description": "Kicka splash theme for Plasma 6",
+        "Id": "Kicka-splash-theme-for-plasma-6",
+        "License": "GPLv3",
+        "Name": "Kicka splash theme for plasma 6",
+        "Website": ""
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+    "X-Plasma-APIVersion": "2"
+}
+
